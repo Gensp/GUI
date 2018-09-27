@@ -1,0 +1,37 @@
+<!--pages/list/list.wxml-->
+<g-box title="基础布局">
+  <g-list>我左对齐</g-list>
+  <g-list align="tc">我居中对齐</g-list>
+  <g-list align="tr">我右对齐</g-list>
+  <g-list title="我是标题">我是内容</g-list>
+  <g-list title="多行显示">
+    <view>我是内容1</view>
+    <view>我是内容2</view>
+  </g-list>
+  <g-list title="居中显示" vertical>
+    <view>我是内容1</view>
+    <view>我是内容2</view>
+  </g-list>
+</g-box>
+
+<g-box title="带箭头">
+  <g-list link>我是标题也是内容</g-list>
+  <g-list title="我是标题" link>我是内容</g-list>
+  <g-list title="我是标题" ellipsis link>我是超长的内容，超出会自动隐藏显示省略号</g-list>
+</g-box>
+
+<g-box title="带图标">
+  <g-list icon="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFEAAABRCAMAAACdUboEAAAAjVBMVEUAAABcVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj5cVj4c8f2rAAAALnRSTlMAEAb6P38V9sgjCanx5puOeXJUTdvVvKRGHAzgwravOOzQzYiEZypiWaCWbUowUAQ44AAAAzpJREFUWMPtmNlyozAQRcViVoMxm/GK8b7l/v/njYRITAJIEM/DVI3Pi6tc8qHV6u6IkDdv3vyHONnILbYmYHrWbJqrL+qUc6rhG2M3fEFq30y04I2U3/kMn4e3vN4z21Ad5fSYuh4PdPSbOI/bUnc4ff86n4xBifXBCXRBKcK2ozqWgR4GZnAJYHvuOv4Ry8d1iDBnO3YVwRN3NCEDhB80VdpduETd7y4DtkwjNB/k77FIqLDfUWZu7K3ujmzZDEDUx6e6KEls8boQQED64KMiXgj37AHrfgVBXRv9dKAfI9G6Pe2xeS/jBFixzwBIRM1sAlPSCws4lz8BIFg2opWrdkalrXNSoe+o6Egoc7HRE4UISqqXFn7Mhcp3XwgKDDAXAiPDeiwObG6y3t5dHqzYBP11BWZEYuQupOyUOZZgWi5rxX1b6U2j7lYlGPG6KN2GoKPp8z83rQNm1DAqxL5qGE95VKdJal0jSb9YXzOcbS9sGNmxhI2gRLXjPwuYcW4YhzGr1c4GJXepUc8ExjXwNUcLWsAxmxoSY8h+08mqdtRjwJ4nVLIXGlmmJp1CFtdnxRiAphKD9dpNauwVY87/NCn0K8xExj3fhTyPF1q57NNJ2RhUu403IJCfdb2QVHboa6fLyGri2Kser89Hs1mwUrqMCaALe2b1TGlY2xgso93oaIBg5s81bJ6D8qOefSRGqzEDPCIgnxrVowEsvqUD8bzNuOelIOcEbEmNO7V5bcaY976ciE2hOmdQmkYd0MTTI3R31o0mcNrYzEVrM7q0WEU+Y4WSSbZsXjkjkxkbyYFo9Kg71AgbY8uEqTbK2yICptTjZ6HFfGZLa31MftTyQ3bpKnjTqzRjsU3kKEvZHQlV+R/qC8UD2rR7Gc/9jAd+TxGRVPc26zlEJVl3JWsCVjh5loL1tAzWmJbswuwkqLjJfI7Ph4eMeVWQPiu7hajtC3aNokIp6nkdJzOd3ymWl64AD6wj0wUZRlpe7Npu6lMP/O49kIy/owY/Ci73y+8T/YX369i/67ZCHOMUBZstGONAJb/C9k20sA0U8muUY/P/FJH66mviY7QptszlWdcgJ2/evHnzL/IHm/mIUw24ciAAAAAASUVORK5CYII=" link>
+    <view>我是内容</view>
+  </g-list>
+</g-box>
+
+<g-box title="头像">
+  <g-list avatar="https://p3.pstatp.com/thumb/7be8000268c22a5e9d23.jpeg" link>Gensp</g-list>
+</g-box>
+
+<g-box title="圆角" mode="empty">
+  <g-list mode="radius">我是内容</g-list>
+  <g-list title="我是标题" mode="radius">我是内容</g-list>
+  <g-list avatar="https://p3.pstatp.com/thumb/7be8000268c22a5e9d23.jpeg" mode="radius">Gensp</g-list>
+</g-box>

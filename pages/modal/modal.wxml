@@ -1,0 +1,39 @@
+<!--pages/modal/modal.wxml-->
+<view class='wrap'>
+  <view class='item-modal'>
+    <g-button type='primary' bindintap="inToggleModal1">普通对话框</g-button>
+    <g-modal show="{{modal1}}" onemsg="留言标题" twomsg="留言内容" bindinsuccess="inToggleModal1" bindincancel="inToggleModal1"></g-modal>
+  </view>
+
+  <view class='item-modal'>
+    <g-button type='primary' plain bindintap="inToggleModal2">成功提示框</g-button>
+    <g-modal show="{{modal2}}" iscancel="{{false}}" types="success" onemsg="绑定成功" bindinsuccess="inToggleModal2" bindincancel="inToggleModal2"></g-modal>
+  </view>
+
+  <view class='item-modal'>
+    <g-button type='danger' bindintap="inToggleModal3">错误提示框</g-button>
+    <g-modal show="{{modal3}}" iscancel="{{false}}" types="danger" onemsg="绑定有误" twomsg="请重新操作..." bindinsuccess="inToggleModal3" bindincancel="inToggleModal3"></g-modal>
+  </view>
+
+  <view class='item-modal'>
+    <g-button type='danger' plain bindintap="inToggleModal4">删除提示框</g-button>
+    <g-modal show="{{modal4}}" types="del" onemsg="确认删除？" twomsg="删除后将无法恢复..." bindinsuccess="inToggleModal4" bindincancel="inToggleModal4" successTxt=" 删 除"></g-modal>
+  </view>
+
+  <view class='item-modal'>
+    <g-button type='primary' bindintap="inToggleModal5">自定义配图</g-button>
+    <g-modal show="{{modal5}}" types="custom" mapping="https://wx.qlogo.cn/mmopen/vi_32/urW96cUhc4zSpm8HGQzTSGw6Mg40R1bHPZWUOdY2ia09bKTMicevqvVwybrF1rw8bYIhtibjkfPiaFMdYrDpibuqXkw/132" onemsg="确认绑定账号“xxx”？" twomsg="请谨慎操作..." bindinsuccess="inToggleModal5" bindincancel="inToggleModal5" successTxt=" 绑 定"></g-modal>
+  </view>
+
+  <view class='item-modal'>
+    <g-button type='primary' plain bindintap="inToggleModal6">自定义留言</g-button>
+    <g-modal show="{{modal6}}" bindinsuccess="inToggleModal6" bindincancel="inToggleModal6">
+      <view class='custom-msg' wx:for="{{5}}" wx:key="{{index}}">自定义留言{{item}}</view>
+    </g-modal>
+  </view>
+
+  <view class='item-modal'>
+    <g-button type='primary' bindintap="inToggleModal7">异步操作</g-button>
+    <g-modal show="{{modal7}}" isloading="{{isloading}}" types="del" onemsg="确认删除？" twomsg="删除后将无法恢复..." bindinsuccess="inToggleModal7" bindincancel="inToggleModal7"></g-modal>
+  </view>
+</view>

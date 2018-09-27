@@ -1,0 +1,29 @@
+<!--pages/input/input.wxml-->
+<g-box title="基础用法">
+  <g-input title="联系人" placeholder='我可以自动获取焦点' focus bindchange="inChange" bindfocus="inFocus" bindblur="inBlur" bindconfirm="inConfirm" />
+  <g-input type="number" title="手机号" placeholder='我只能输入数字' maxlength='11' />
+  <g-input type="password" title="密码" placeholder='我是密码输入框' />
+  <g-input title="搜索" placeholder='自定义键盘右下角按钮文字' confirmtype="search" />
+  <g-input title="居中显示" placeholder='我现在是居中对齐' align="tc" />
+  <g-input title="居右显示" placeholder='我现在是右对齐' align="tr" />
+</g-box>
+
+<g-box title="无标题">
+  <g-input placeholder='标题离我而去了' />
+  <g-input type="number" placeholder='我被禁用了' disabled />
+</g-box>
+
+<g-box title="自定义placeholder-style">
+  <g-input placeholder='我是自定义的提示' placeholderstyle="color: #2ca9e1" />
+</g-box>
+
+<g-box title="错误">
+  <g-input title="我是标题" value='我犯错了' error />
+</g-box>
+<g-box title="圆角" mode="empty"></g-box>
+<g-box g-class="demo-box" mode="empty">
+  <g-input g-class="demo-radius" d-class="demo-title" i-class="demo-input" placeholder='我的角是圆的，样式也是自定义的' mode="radius" />
+  <g-input g-class="demo-radius" d-class="demo-title" i-class="demo-input" title="我是标题" placeholder='我是提示' mode="radius" />
+  <g-input g-class="demo-radius" d-class="demo-title" i-class="demo-input" title="我是标题" placeholder='我也犯错了' mode="radius" error />
+</g-box>
+

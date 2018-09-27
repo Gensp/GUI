@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "g-box": "/component/box/box",
+    "g-checkbox-group": "/component/checkbox-group/checkbox-group",
+    "g-checkbox": "/component/checkbox/checkbox",
+    "g-button": "/component/button/button"
+  }
+}

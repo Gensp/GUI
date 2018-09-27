@@ -1,0 +1,4 @@
+<!--component/checkbox-group/checkbox-group.wxml-->
+<checkbox-group class="g-class">
+  <slot></slot>
+</checkbox-group>

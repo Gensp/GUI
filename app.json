@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/input/input",
+    "pages/list/list",
+    "pages/flex/flex",
+    "pages/button/button",
+    "pages/textarea/textarea",
+    "pages/radio/radio",
+    "pages/checkbox/checkbox",
+    "pages/switch/switch",
+    "pages/loading/loading",
+    "pages/modal/modal",
+    "pages/drawer/drawer",
+    "pages/tab/tab",
+    "pages/line/line",
+    "pages/size/size",
+    "pages/gui/gui"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "GUI",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "color": "#999",
+    "selectedColor": "#2ca9e1",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/nav/index-default.png",
+        "selectedIconPath": "images/nav/index-active.png",
+        "text": "组件"
+      },
+      {
+        "pagePath": "pages/gui/gui",
+        "iconPath": "images/nav/gui-default.png",
+        "selectedIconPath": "images/nav/gui-active.png",
+        "text": "GUI"
+      }
+    ]
+  }
+}

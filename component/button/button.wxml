@@ -1,0 +1,25 @@
+<!--component/button/button.wxml-->
+<block wx:if="{{opentype == 'getUserInfo'}}">
+  <button class='g-class g-btn {{radius?"g-btn-radius":""}} g-btn-{{type}} g-btn-{{size}} {{plain?"g-btn-plain":""}} {{disabled?"g-btn-disabled":""}}' open-type="{{opentype}}" disabled="{{disabled}}" bindgetuserinfo="inGetUserInfo">  
+    <slot></slot>
+  </button>
+</block>
+
+<block wx:elif="{{opentype == 'getPhoneNumber'}}">
+  <button class='g-class g-btn {{radius?"g-btn-radius":""}} g-btn-{{type}} g-btn-{{size}} {{plain?"g-btn-plain":""}} {{disabled?"g-btn-disabled":""}}' open-type="{{opentype}}" disabled="{{disabled}}" bindgetphonenumber="inGerPhoneNumber">  
+    <slot></slot>
+  </button>
+</block>
+
+<block wx:elif="{{opentype == 'openSetting'}}">
+  <button class='g-class g-btn {{radius?"g-btn-radius":""}} g-btn-{{type}} g-btn-{{size}} {{plain?"g-btn-plain":""}} {{disabled?"g-btn-disabled":""}}' open-type="{{opentype}}" disabled="{{disabled}}" bindopensetting="inOpenSetting">  
+    <slot></slot>
+  </button>
+</block>
+
+<block wx:else>
+  <button class='g-class g-btn {{radius?"g-btn-radius":""}} g-btn-{{type}} g-btn-{{size}} {{plain?"g-btn-plain":""}} {{disabled?"g-btn-disabled":""}}' open-type="{{opentype}}" bindtap='inTap'>  
+    <slot></slot>
+  </button>
+</block>
+

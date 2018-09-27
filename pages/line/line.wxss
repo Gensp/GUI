@@ -1,0 +1,6 @@
+/* pages/line/line.wxss */
+.main{
+  line-height: 48rpx;
+  background-color: #fff;
+  padding:30rpx;
+}

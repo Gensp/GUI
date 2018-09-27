@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "g-box": "/component/box/box",
+    "g-radio-group": "/component/radio-group/radio-group",
+    "g-radio": "/component/radio/radio",
+    "g-button":"/component/button/button"
+  }
+}

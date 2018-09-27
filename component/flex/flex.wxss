@@ -1,0 +1,2 @@
+/* component/flex/flex.wxss */
+.g-flex::after{content:"";display:table;clear:both}

@@ -1,0 +1,5 @@
+/* pages/textarea/textarea.wxss */
+.custom-input,
+.custom-input textarea{
+  background-color: #fcfae7!important;
+}

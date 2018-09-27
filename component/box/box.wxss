@@ -1,0 +1,28 @@
+/* component/title/title.wxss */
+.g-box{
+  color: #666;
+}
+.g-title{
+  min-height: 48rpx;
+	line-height: 48rpx;
+	padding:30rpx 30rpx 10rpx;
+}
+.g-border{
+  position: relative;
+}
+.g-border::before,
+.g-border::after{
+	content: '';
+	position: absolute;
+  z-index: 3;
+	left: 0;
+	width: 100%;
+	border-bottom: 1px solid #e5e5e5;
+  transform: scaleY(.5);
+}
+.g-border::before{
+  top: 0;
+}
+.g-border::after{
+  bottom: 0;
+}

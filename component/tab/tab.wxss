@@ -1,0 +1,19 @@
+/* component/tab/tab.wxss */
+.g-tab-item{
+  flex:1;
+  position: relative;
+  overflow: hidden;
+  padding:0 20rpx;
+}
+.g-tab-active{
+  color: #2ca9e1;
+}
+.g-tab-active .g-border{
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 20rpx;
+  width: calc(100% - 40rpx);
+  border-top: 4rpx solid #2ca9e1; 
+}

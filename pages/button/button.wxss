@@ -1,0 +1,10 @@
+/* pages/button/button.wxss */
+.demo-flex{
+  padding:0 20rpx;
+}
+.demo-col{
+  padding:0 10rpx 20rpx 10rpx;
+}
+.custom-btn{
+  background-color: #7bbd4f!important;
+}

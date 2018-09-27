@@ -1,0 +1,37 @@
+<!--pages/flex/flex.wxml-->
+<g-box title="基础布局" mode="empty"></g-box>
+<g-flex g-class="demo-flex">
+  <g-col g-class="demo-col">span-12</g-col>
+</g-flex>
+<g-flex g-class="demo-flex">
+  <g-col g-class="demo-col" span="10">span-10</g-col>
+  <g-col g-class="demo-col light" span="2">span-2</g-col>
+</g-flex>
+<g-flex g-class="demo-flex">
+  <g-col g-class="demo-col" span="8">span-8</g-col>
+  <g-col g-class="demo-col light" span="4">span-4</g-col>
+</g-flex>
+<g-flex g-class="demo-flex">
+  <g-col g-class="demo-col" span="6">span-6</g-col>
+  <g-col g-class="demo-col light" span="6">span-6</g-col>
+</g-flex>
+<g-flex g-class="demo-flex">
+  <g-col g-class="demo-col" span="4">span-4</g-col>
+  <g-col g-class="demo-col light" span="4">span-4</g-col>
+  <g-col g-class="demo-col" span="4">span-4</g-col>
+</g-flex>
+
+<g-box title="偏移布局" mode="empty"></g-box>
+<g-flex g-class="demo-flex">
+  <g-col g-class="demo-col" offset="2" span="10">offset-2 span-10</g-col>
+</g-flex>
+<g-flex g-class="demo-flex">
+  <g-col g-class="demo-col" offset="4" span="8">offset-4 span-8</g-col>
+</g-flex>
+<g-flex g-class="demo-flex">
+  <g-col g-class="demo-col" offset="6" span="6">offset-6 span-6</g-col>
+</g-flex>
+<g-flex g-class="demo-flex">
+  <g-col g-class="demo-col" offset="2" span="4">offset-2 span-4</g-col>
+  <g-col g-class="demo-col" offset="2" span="4">offset-2 span-4</g-col>
+</g-flex>

@@ -1,0 +1,4 @@
+/* pages/loading/loading.wxss */
+.custom-loading::after{
+  border-top: 4rpx solid rgba(251, 206, 17, 1)!important;
+}

@@ -1,0 +1,16 @@
+<!--pages/radio/radio.wxml-->
+<g-box title="基础布局" g-class="demo-box">
+  <g-radio-group active="{{radioActive}}" bindinchange="inChange1">
+    <g-radio wx:for="{{radioData}}" wx:key="{{index}}" value="{{item.value}}" align="{{item.align}}"></g-radio>
+  </g-radio-group>
+</g-box>
+<g-radio-group active="{{radiusActive}}" bindinchange="inChange2">
+  <g-radio g-class="demo-radio" mode="default" value="芒果"></g-radio>
+  <g-radio g-class="demo-radio" mode="default" value="香蕉"></g-radio>
+</g-radio-group>
+<g-box title="禁用">
+  <g-radio value="番茄" disabled='{{disabled.state}}' checked='{{disabled.checked}}' bindinchange="inDisabledChange"></g-radio>
+</g-box>
+<view class='wrap'>
+  <g-button type="primary" bindintap="inTap">切换禁用状态</g-button>
+</view>

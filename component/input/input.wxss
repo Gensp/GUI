@@ -1,0 +1,89 @@
+/* component/input/input.wxss */
+.tc{
+  text-align: center;
+}
+.tr{
+  text-align: right;
+}
+.g-cell{
+  display: flex;
+	flex-flow: row;
+	position: relative;
+	box-shadow: 0 10rpx 20rpx rgba(0,0,0, .01);
+}
+.g-cell-bd{
+	flex: 1;
+	overflow: hidden;
+}
+.g-cell-hd{
+	width: 200rpx;
+	color: #777;
+}
+.g-cell-hd,
+.g-input{
+  position: relative;
+	min-height: 88rpx;
+  line-height: 48rpx;
+	padding: 20rpx 30rpx;
+	background-color: #fff;
+  box-sizing: border-box;
+}
+.g-input{
+  height: 88rpx;
+}
+.g-cell-hd + .g-cell-bd .g-input{
+  padding-left: 0;
+}
+.g-cell-hd.disabled,
+.g-input.disabled{
+  background-color: #f9f9f9;
+}
+textarea.g-input{
+  width: 100%;
+  height: 200rpx;
+  padding-top: 12rpx;
+  padding-bottom: 12rpx;
+}
+.g-cell::before{
+	content: '';
+	position: absolute;
+  z-index: 2;
+  height: 0;
+	left: 30rpx;
+  bottom: 0;
+	width: calc(100% - 30rpx);
+	border-bottom: 1px solid rgba(0,0,0, .05);
+	transform: scaleY(.5);
+}
+.g-input-error::after{
+  content: '';
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  transform-origin: 0 0;
+  pointer-events: none;
+  box-sizing: border-box;
+  border:1px solid #e62b2b;
+  transform: scale(.5);
+}
+.g-radius .g-cell-hd{
+  border-top-left-radius: 8rpx;
+  border-bottom-left-radius: 8rpx;
+}
+.g-radius .g-cell-bd{
+  border-radius: 8rpx;
+}
+.g-radius .g-cell-hd + .g-cell-bd{
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.g-radius::before{
+  border:0;
+}
+.g-radius::after{
+  border-radius: 16rpx;
+}

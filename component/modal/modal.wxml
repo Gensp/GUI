@@ -1,0 +1,22 @@
+<!--component/modal/modal.wxml-->
+<view class='g-class-mask g-mask' hidden="{{!show}}"></view>
+<view class='g-class g-fixed-bar' hidden="{{!show}}">
+  <view class='g-modal-bar'>
+    <view class='g-modal-cen'>
+      <image class='g-mapping' wx:if="{{types == 'success'}}" src='{{imgurl.success}}' mode='aspectFill' />
+      <image class='g-mapping' wx:elif="{{types == 'danger'}}" src='{{imgurl.danger}}' mode='aspectFill' />
+      <image class='g-mapping' wx:elif="{{types == 'del'}}" src='{{imgurl.del}}' mode='aspectFill' />
+      <image class='g-mapping' wx:elif="{{types == 'custom' && mapping.length > 0 }}" src='{{mapping}}' mode='aspectFill' style='{{mappingstyle}}' />
+      <view class='g-onemsg' wx:if="{{onemsg}}"><text class='strong'>{{onemsg}}</text></view>
+      <view class='g-twomsg color-gray' wx:if="{{twomsg}}">{{twomsg}}</view>
+      <slot></slot>
+    </view>
+    <view class='flex-bar border-top'>
+      <view class='flex1 g-btn border-right color-gray' wx:if="{{iscancel}}" bindtap='inCancel' style='{{types == "custom"?cancelColor:""}}'>{{cancelTxt}}</view>
+      <view class='flex1 g-btn color-blue' bindtap='inSuccess' style='{{types == "custom"?successColor:""}}'>
+        <view class='g-loading' wx:if="{{isloading}}"></view>
+        {{successTxt}}
+      </view>
+    </view>
+  </view>
+</view>

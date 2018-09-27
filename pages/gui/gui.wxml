@@ -1,0 +1,21 @@
+<!--pages/gui/gui.wxml-->
+<view class='wrap'>
+  <image class='guilogo' src='../../images/gui.png' />
+  <g-size g-class="demo-size">
+    <view>一款基于小程序规范的组件库</view>
+    <view>简单、易用、可扩展</view>
+  </g-size>
+</view>
+<g-box title="GitHub">
+  <g-list g-class="github-bar">
+    <g-size g-class="color-gray" size="h6">API文档整理中...</g-size>
+    <g-size g-class="color-gray" size="h6">{{github}}</g-size>
+    <g-button g-class="copy-btn" type="primary" size="middle" bindintap="inCopyLink">复制地址</g-button>
+  </g-list>
+</g-box>
+<g-box title="ChangeLog">
+  <g-list>
+    <g-size strong>V1.0.0(2018-09-27)</g-size>
+    <g-size g-class="color-gray" size="h6">- 初始版本</g-size>
+  </g-list>
+</g-box>

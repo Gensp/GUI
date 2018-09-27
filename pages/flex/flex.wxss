@@ -1,0 +1,15 @@
+/* pages/flex/flex.wxss */
+.demo-flex {
+  text-align: center;
+  margin-bottom: 20rpx;
+  background-color: #fff;
+}
+.demo-col{
+  color: #fff;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: rgba(44,169,225, 1);
+}
+.demo-col.light{
+  background-color: rgba(44,169,225, .5);
+}

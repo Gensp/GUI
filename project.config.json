@@ -1,0 +1,130 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.2.5",
+	"appid": "wxccd02aa3adde2f9b",
+	"projectname": "GUI",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 14,
+			"list": [
+				{
+					"id": -1,
+					"name": "input",
+					"pathName": "pages/input/input",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "list",
+					"pathName": "pages/list/list",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "flex",
+					"pathName": "pages/flex/flex",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "button",
+					"pathName": "pages/button/button",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "textarea",
+					"pathName": "pages/textarea/textarea",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "radio",
+					"pathName": "pages/radio/radio",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "checkbox",
+					"pathName": "pages/checkbox/checkbox",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "switch",
+					"pathName": "pages/switch/switch",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "loading",
+					"pathName": "pages/loading/loading",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "modal",
+					"pathName": "pages/modal/modal",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "drawer",
+					"pathName": "pages/drawer/drawer",
+					"query": ""
+				},
+				{
+					"id": 11,
+					"name": "tab",
+					"pathName": "pages/tab/tab",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "line",
+					"pathName": "pages/line/line",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "size",
+					"pathName": "pages/size/size",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "gui",
+					"pathName": "pages/gui/gui"
+				}
+			]
+		}
+	}
+}

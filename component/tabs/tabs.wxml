@@ -1,0 +1,9 @@
+<!--component/tabs/tabs.wxml-->
+<scroll-view class='g-class g-scroll' scroll-x wx:if="{{scroll}}">
+  <view class='g-tabs'>
+      <slot></slot>
+  </view>
+</scroll-view>
+<view class='g-class g-tabs g-space-around' wx:else>
+  <slot></slot>
+</view>

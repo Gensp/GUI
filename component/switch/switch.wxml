@@ -1,0 +1,4 @@
+<!--component/switch/switch.wxml-->
+<view class='g-class g-switch {{value?"g-checked":""}} {{disabled?"g-disabled":""}}' bindtap='inToggle'>
+  <view class='g-state' data-msg="{{msg}}"></view>
+</view>

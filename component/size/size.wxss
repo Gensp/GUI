@@ -1,0 +1,31 @@
+/* component/size/size.wxss */
+.strong{
+  font-weight: bold;
+}
+.tl{
+  text-align: left;
+}
+.tc{
+  text-align: center;
+}
+.tr{
+  text-align: right;
+}
+.h1{
+  font-size: 40rpx;
+}
+.h2{
+  font-size: 34rpx;
+}
+.h3{
+  font-size: 30rpx;
+}
+.h4{
+  font-size: 28rpx;
+}
+.h5{
+  font-size: 26rpx;
+}
+.h6{
+  font-size: 24rpx;
+}

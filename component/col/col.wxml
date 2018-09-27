@@ -1,0 +1,4 @@
+<!--component/col/col.wxml-->
+<view class='g-class g-col g-col-{{span}} {{offset?("g-offset-"+offset):""}}'>
+  <slot></slot>
+</view>

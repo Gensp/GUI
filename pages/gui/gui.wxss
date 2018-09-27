@@ -1,0 +1,25 @@
+/* pages/gui/gui.wxss */
+.color-gray{
+  color: #999;
+}
+.wrap{
+  text-align: center;
+  padding: 60rpx 30rpx;
+  color: #666;
+}
+.demo-size{
+  text-align: center;
+  line-height: 48rpx;
+}
+.guilogo{
+  width: 180rpx;
+  height: 180rpx;
+}
+.github-bar{
+  text-align: center;
+  padding: 10rpx 0; 
+}
+.copy-btn{
+  width: 35%;
+  margin: 20rpx auto 0;
+}

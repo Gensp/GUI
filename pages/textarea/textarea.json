@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "g-box": "/component/box/box",
+    "g-input": "/component/input/input"
+  }
+}

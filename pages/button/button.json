@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "g-box": "/component/box/box",
+    "g-flex": "/component/flex/flex",
+    "g-col": "/component/col/col",
+    "g-button": "/component/button/button"
+  }
+}

@@ -1,0 +1,3 @@
+<!--pages/tabs/tabs.wxml-->
+<g-box title="基础布局" mode="empty"></g-box>
+<g-tabs></g-tabs>

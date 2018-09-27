@@ -1,0 +1,13 @@
+<!--component/radio/radio.wxml-->
+<label class='g-class {{align?("g-"+align):"g-left"}}' catchtap='inChange'>
+  <g-list wx:if="{{mode == 'list'}}">
+    <view class='radio-main'>
+      <radio checked="{{checked}}" disabled="{{disabled}}" color="{{color}}" value='value'></radio>
+      <text class='g-value {{disabled?"color-gray":""}}'>{{value}}</text>
+    </view>
+  </g-list>
+  <view class='radio-main' wx:else>
+    <radio checked="{{checked}}" disabled="{{disabled}}" color="{{color}}" value='value'></radio>
+    <text class='g-value {{disabled?"color-gray":""}}'>{{value}}</text>
+  </view>
+</label>

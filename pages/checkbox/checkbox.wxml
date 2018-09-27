@@ -1,0 +1,16 @@
+<!--pages/checkbox/checkbox.wxml-->
+<g-box title="基础布局" g-class="demo-box">
+  <g-checkbox-group active="{{checkboxActive}}" bindinchange="inChange1">
+    <g-checkbox wx:for="{{checkboxData}}" wx:key="{{index}}" value="{{item.value}}" align="{{item.align}}"></g-checkbox>
+  </g-checkbox-group>
+</g-box>
+<g-checkbox-group active="{{radioActive}}" bindinchange="inChange2">
+  <g-checkbox g-class="demo-radio" mode="default" value="芒果"></g-checkbox>
+  <g-checkbox g-class="demo-radio" mode="default" value="香蕉"></g-checkbox>
+</g-checkbox-group>
+<g-box title="禁用">
+  <g-checkbox value="番茄" disabled='{{disabled.state}}' checked='{{disabled.checked}}' bindinchange="inDisabledChange"></g-checkbox>
+</g-box>
+<view class='wrap'>
+  <g-button type="primary" bindintap="inTap">切换禁用状态</g-button>
+</view>

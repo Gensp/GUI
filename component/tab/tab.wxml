@@ -1,0 +1,5 @@
+<!--component/tab/tab.wxml-->
+<view class='g-class g-tab-item {{checked?"g-tab-active":""}}' style="{{checked && activeColor?('color:'+activeColor):''}}" bindtap='inTap'>
+  {{value}}
+  <view class='b-class g-border' hidden="{{!checked}}" style="{{checked && activeColor?('border-color:'+activeColor):''}}"></view>
+</view>

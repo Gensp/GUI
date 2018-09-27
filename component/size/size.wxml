@@ -1,0 +1,2 @@
+<!--component/size/size.wxml-->
+<view class="g-class {{align}} {{strong?'strong':''}} {{size}}" style='{{color?("color:"+color):""}}'><slot></slot></view>

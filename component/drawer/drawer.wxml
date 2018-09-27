@@ -1,0 +1,5 @@
+<!--component/drawer/drawer.wxml-->
+<view class='g-class-mask g-mask {{show?"g-mask-show":""}}' bindtap='inTapMask'></view>
+<view class='g-class g-fixed-bar g-drawer-{{position}} {{show?"g-drawer-show":""}}' style="{{ (position === 'left' ||  position == 'right') && width?('width:'+width):'' }} {{ (position === 'top' ||  position == 'bottom') && height?('height:'+height):'' }}">
+  <slot></slot>
+</view>

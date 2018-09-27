@@ -1,0 +1,13 @@
+/**index.wxss**/
+.wrap{
+  text-align: center;
+  padding: 60rpx 30rpx;
+  color: #666;
+}
+.guilogo{
+  width: 180rpx;
+  height: 180rpx;
+}
+.demo-size{
+  line-height: 48rpx;
+}

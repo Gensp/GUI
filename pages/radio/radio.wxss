@@ -1,0 +1,13 @@
+/* pages/radio/radio.wxss */
+.wrap{
+  padding: 30rpx;
+}
+.demo-box{
+  margin-bottom: 30rpx;
+}
+.demo-radio{
+  display: inline-block;
+  box-sizing: border-box;
+  padding:0 30rpx;
+  width: 50%;
+}

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "g-button": "/component/button/button",
+    "g-drawer": "/component/drawer/drawer"
+  }
+}

@@ -1,0 +1,8 @@
+/* pages/size/size.wxss */
+.wrap{
+  padding: 40rpx 30rpx 0;
+}
+.demo-size{
+  text-align: center;
+  padding:30rpx 0;
+}

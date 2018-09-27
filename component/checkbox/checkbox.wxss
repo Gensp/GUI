@@ -1,0 +1,24 @@
+/* component/checkbox/checkbox.wxss */
+.color-gray{
+  color: #999;
+}
+radio{
+  width: 48rpx;
+  height: 48rpx;
+}
+.g-value{
+  position: relative;
+  top: 2rpx;
+}
+.g-left radio{
+  margin-right: 16rpx;
+}
+.g-right radio{
+  margin-left: 16rpx;
+}
+.radio-main{
+  display: flex;
+}
+.g-right .radio-main{
+  flex-direction: row-reverse;
+}

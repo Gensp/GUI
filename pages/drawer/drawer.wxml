@@ -1,0 +1,26 @@
+<!--pages/drawer/drawer.wxml-->
+<view class='wrap'>
+
+  <view class='item-drawer'>
+    <g-button type='primary' bindintap="inToggleDrawerTop">上边滑出（自定义高度30%）</g-button>
+    <g-drawer g-class="demo-drawer" position="top" height="30%" show="{{drawer.top}}" bindinmask="inToggleDrawerTop">点击遮罩关闭</g-drawer>
+  </view>
+
+  <view class='item-drawer'>
+    <g-button type='primary' plain bindintap="inToggleDrawerRight">右边滑出（自定义宽度40%）</g-button>
+    <g-drawer g-class="demo-drawer" position="right" width="40%" show="{{drawer.right}}" bindinmask="inToggleDrawerRight">点击遮罩关闭</g-drawer>
+  </view>
+
+  <view class='item-drawer'>
+    <g-button type='primary' bindintap="inToggleDrawerBottom">下边滑出（默认高度60%）</g-button>
+    <g-drawer g-class="demo-drawer" position="bottom" show="{{drawer.bottom}}" bindinmask="inToggleDrawerBottom">点击遮罩关闭</g-drawer>
+  </view>
+
+  <view class='item-drawer'>
+    <g-button type='primary' plain bindintap="inToggleDrawerLeft">左边滑出（默认宽度60%）</g-button>
+    <g-drawer g-class="demo-drawer" show="{{drawer.left}}">
+      <view class='demo-text'>点击按钮关闭</view>
+      <g-button type='danger' bindintap="inToggleDrawerLeft">关闭</g-button>
+    </g-drawer>
+  </view>
+</view>

@@ -1,0 +1,4 @@
+<!--component/radio-group/radio-group.wxml-->
+<radio-group class="g-class">
+  <slot></slot>
+</radio-group>

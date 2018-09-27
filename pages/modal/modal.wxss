@@ -1,0 +1,10 @@
+/* pages/modal/modal.wxss */
+.wrap{
+  padding:30rpx;
+}
+.item-modal + .item-modal{
+  margin-top: 30rpx;
+}
+.custom-msg{
+  line-height: 48rpx;
+}

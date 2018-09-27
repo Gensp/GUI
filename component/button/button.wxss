@@ -1,0 +1,102 @@
+/* component/button/button.wxss */
+.g-btn{
+  position: relative;
+  color: #666;
+  background-color: #fff;
+  border-radius: 8rpx;
+  overflow: initial;
+}
+.g-btn-radius{
+  border-radius: 50px;
+}
+.g-btn-plain.g-btn-radius::after{
+  border-radius: 100px;
+}
+.g-btn-normal{
+  font-size: 28rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  padding: 0 30rpx;
+}
+.g-btn-middle{
+  height: 68rpx;
+  line-height: 68rpx;
+  padding: 0 20rpx;
+  font-size: 26rpx;
+}
+.g-btn-small{
+  height: 48rpx;
+  line-height: 48rpx;
+  padding: 0 10rpx;
+  font-size: 24rpx;
+}
+.g-btn::after{
+  border: 0;
+  border-radius: 16rpx;
+}
+.g-btn:not(.g-btn-disabled):active{
+  opacity: .6;
+}
+.g-btn-primary{
+  color: #fff;
+  background-color: #2ca9e1;
+}
+.g-btn-danger{
+  color: #fff;
+  background-color: #f05f5f;
+}
+.g-btn-plain{
+  background: none!important;
+}
+.g-btn-plain::after{
+  content: "";
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid rgba(0,0,0, .2);
+  transform-origin: 0 0;
+  pointer-events: none;
+  box-sizing: border-box;
+  transform: scale(0.5);
+}
+.g-btn-plain.g-btn-primary{
+  color: #2ca9e1;
+}
+.g-btn-plain.g-btn-primary::after{
+  border-color: #2ca9e1;
+}
+.g-btn-plain.g-btn-danger{
+  color: #f05f5f;
+}
+.g-btn-plain.g-btn-danger::after{
+  border-color: #f05f5f;
+}
+button.g-btn-default.g-btn-disabled{
+  color: rgba(0,0,0, .2);
+  background-color: rgba(255,255,255,.8);
+}
+button.g-btn-primary.g-btn-disabled{
+  color: rgba(255,255,255, .4);
+  background-color: rgba(44,169,225,.8);
+}
+button.g-btn-danger.g-btn-disabled{
+  color: rgba(255,255,255, .4);
+  background-color: rgba(240,95,95,.8);
+}
+button.g-btn-plain.g-btn-primary.g-btn-disabled{
+  color: rgba(44,169,225,.5)
+}
+button.g-btn-plain.g-btn-danger.g-btn-disabled{
+  color: rgba(240,95,95,.5);
+}
+button.g-btn-plain.g-btn-default.g-btn-disabled::after{
+  border-color: rgba(0,0,0, .1)
+}
+button.g-btn-plain.g-btn-primary.g-btn-disabled::after{
+  border-color: rgba(44,169,225,.5)
+}
+button.g-btn-plain.g-btn-danger.g-btn-disabled::after{
+  border-color: rgba(240,95,95,.5);
+}

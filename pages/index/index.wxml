@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<view class='wrap'>
+  <image class='guilogo' src='../../images/gui.png' />
+  <g-size g-class="demo-size">
+    <view>一款基于小程序规范的组件库</view>
+    <view>简单、易用、可扩展</view>
+  </g-size>
+</view>
+<g-box title="{{i.title}}" wx:for="{{itemData}}" wx:for-item="i" wx:key="{{index}}">
+  <g-list link wx:for="{{i.list}}" wx:for-item="j" wx:key="{{index}}" bindtap="inToPage" data-path="{{j.path}}">{{j.val}}</g-list>
+</g-box>

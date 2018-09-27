@@ -1,0 +1,12 @@
+<!--pages/switch/switch.wxml-->
+<g-box title="基础布局">
+  <g-list title="正常" align="tr">
+    <g-switch value="{{false}}" bindinchange="inChange"></g-switch>
+  </g-list>
+  <g-list title="自定义" align="tr">
+    <g-switch msg="ON"></g-switch>
+  </g-list>
+  <g-list title="禁用" align="tr">
+    <g-switch disabled value="{{false}}"></g-switch>
+  </g-list>
+</g-box>

@@ -1,0 +1,2 @@
+<!--component/loading/loading.wxml-->
+<view class='g-class g-loading' hidden="{{!show}}"></view>

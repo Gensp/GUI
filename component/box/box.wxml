@@ -1,0 +1,7 @@
+<!--component/title/title.wxml-->
+<view class='g-class g-box'>
+  <view class='g-title' wx:if="{{title}}">{{title}}</view>
+  <view wx:if="{{mode}}" class="g-{{mode}}">
+    <slot></slot>
+  </view>
+</view>

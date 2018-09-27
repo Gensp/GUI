@@ -1,0 +1,28 @@
+/* component/loading/loading.wxss */
+.g-loading{
+  padding: 30rpx 0;
+}
+.g-loading::after{
+  content: '';
+  display: block;
+  width: 40rpx;
+  height: 40rpx;
+  position: relative;
+  z-index: 2;
+  margin:0 auto;
+  text-indent: -9999px;
+  border-radius: 50%;
+  border-top: 4rpx solid rgba(44, 169, 225, 1);
+  border-right: 4rpx solid rgba(0, 0, 0, .1);
+  border-bottom: 4rpx solid rgba(0, 0, 0, .1);
+  border-left: 4rpx solid rgba(0, 0, 0, .1);
+  animation: loading 2s infinite linear;
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

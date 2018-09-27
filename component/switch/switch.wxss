@@ -1,0 +1,53 @@
+/* component/switch/switch.wxss */
+.g-switch{
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  width: 96rpx;
+  height: 48rpx;
+}
+.g-state{
+  position: relative;
+  border-radius: 24rpx;
+  background-color: #f9f9f9;
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.3);
+}
+.g-state::after{
+  content: attr(data-msg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  text-align: center;
+  display: inline-block;
+  z-index: 2;
+  font-size: 24rpx;
+  color: #fff;
+  line-height: 48rpx;
+  padding-left: 2rpx;
+}
+.g-state::before{
+  content: '';
+  display: block;
+  position: relative;
+  z-index: 3;
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 24rpx;
+  background-color: #fff;
+  box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.5);
+  transform: translate3d(0rpx,0,0);
+  transition: all ease 0.2s;
+}
+.g-switch.g-checked .g-state{
+  background: #2ca9e1;
+  box-shadow: inset 0 0 2rpx rgba(0, 0, 0, 0.5), inset 0 0 80rpx #2ca9e1;
+  -webkit-box-shadow: inset 0 0 2rpx rgba(0, 0, 0, 0.5), inset 0 0 80rpx #2ca9e1;
+}
+.g-switch.g-checked .g-state::before{
+  transform: translate3d(100%,0,0);
+}
+.g-disabled .g-state::before{
+  background-color: #eee;
+}

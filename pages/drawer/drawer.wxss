@@ -1,0 +1,14 @@
+/* pages/drawer/drawer.wxss */
+.wrap{
+  padding:30rpx;
+}
+.item-drawer + .item-drawer{
+  margin-top: 30rpx;
+}
+.demo-drawer{
+  padding:30rpx;
+}
+.demo-text{
+  text-align: center;
+  padding-bottom: 30rpx;
+}

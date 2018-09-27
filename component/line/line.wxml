@@ -1,0 +1,2 @@
+<!--component/line/line.wxml-->
+<view class='g-class {{line>1?"g-multiline":"g-line"}}' style='{{line > 1?("-webkit-line-clamp:"+line):""}}'><slot></slot></view>
