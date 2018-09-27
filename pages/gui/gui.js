@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    github:'https://github.com/Gensp/vue'
+    github:'https://github.com/Gensp/GUI'
   },
 
   /**

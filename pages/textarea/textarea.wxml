@@ -1,10 +1,10 @@
 <!--pages/textarea/textarea.wxml-->
-<g-box title="基础用法">
+<g-box mode="border" title="基础用法">
   <g-input type='textarea' title="我是标题" placeholder='我是留言框' />
 </g-box>
-<g-box title="禁用">
+<g-box mode="border" title="禁用">
   <g-input disabled type='textarea' title="我是标题" value='我被禁用了' />
 </g-box>
-<g-box title="自定义">
+<g-box mode="border" title="自定义">
   <g-input d-class="custom-input" type='textarea' title="我是标题" placeholder='我是自定义的留言框' />
 </g-box>

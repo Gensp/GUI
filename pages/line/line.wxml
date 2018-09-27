@@ -1,10 +1,10 @@
 <!--pages/line/line.wxml-->
-<g-box title="单行文本" mode="empty"></g-box>
+<g-box title="单行文本"></g-box>
 <view class='main'>
   <g-line>GUI是一款基于小程序规范的组件库，简洁、易用、可扩展。GUI是一款基于小程序规范的组件库，简洁、易用、可扩展。 </g-line>
 </view>
 
-<g-box title="多行文本" mode="empty"></g-box>
+<g-box title="多行文本"></g-box>
 <view class='main'>
   <g-line g-class="demo-multiline" line="2">GUI是一款基于小程序规范的组件库，简洁、易用、可扩展。GUI是一款基于小程序规范的组件库，简洁、易用、可扩展。GUI是一款基于小程序规范的组件库，简洁、易用、可扩展。 </g-line>
 </view>

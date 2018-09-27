@@ -1,5 +1,5 @@
 <!--pages/button/button.wxml-->
-<g-box title="基础按钮" mode="empty"></g-box>
+<g-box title="基础按钮"></g-box>
 <g-flex g-class="demo-flex">
   <g-col g-class="demo-col" span="4"><g-button>default</g-button></g-col>
   <g-col g-class="demo-col" span="4"><g-button size="middle">default</g-button></g-col>
@@ -15,13 +15,13 @@
   <g-col g-class="demo-col" span="4"><g-button type="danger" size="middle">danger</g-button></g-col>
   <g-col g-class="demo-col" span="4"><g-button type="danger" size="small">danger</g-button></g-col>
 </g-flex>
-<g-box title="镂空按钮" mode="empty"></g-box>
+<g-box title="镂空按钮"></g-box>
 <g-flex g-class="demo-flex">
   <g-col g-class="demo-col" span="4"><g-button plain>default</g-button></g-col>
   <g-col g-class="demo-col" span="4"><g-button plain type="primary" size="middle">primary</g-button></g-col>
   <g-col g-class="demo-col" span="4"><g-button plain type="danger" size="small">danger</g-button></g-col>
 </g-flex>
-<g-box title="禁用按钮" mode="empty"></g-box>
+<g-box title="禁用按钮"></g-box>
 <g-flex g-class="demo-flex">
   <g-col g-class="demo-col" span="4"><g-button disabled>default</g-button></g-col>
   <g-col g-class="demo-col" span="4"><g-button disabled type="primary" size="middle">primary</g-button></g-col>
@@ -32,7 +32,7 @@
   <g-col g-class="demo-col" span="4"><g-button plain disabled type="primary" size="middle">primary</g-button></g-col>
   <g-col g-class="demo-col" span="4"><g-button plain disabled type="danger" size="small">danger</g-button></g-col>
 </g-flex>
-<g-box title="功能按钮" mode="empty"></g-box>
+<g-box title="功能按钮"></g-box>
 <g-flex g-class="demo-flex">
   <g-col g-class="demo-col" span="12"><g-button radius type="primary" opentype="getUserInfo" bindgetuserinfo="inGetUserInfo">获取用户信息</g-button></g-col>
   <g-col g-class="demo-col" span="12"><g-button radius type="primary" plain opentype="share">分享给好友</g-button></g-col>
@@ -40,7 +40,7 @@
   <g-col g-class="demo-col" span="12"><g-button radius type="danger" opentype="getPhoneNumber" bindgetphonenumber="inGetPhoneNumber">获取手机号码</g-button></g-col>
   <g-col g-class="demo-col" span="12"><g-button radius opentype="openSetting" bindopensetting="inOpenSetting">打开授权页</g-button></g-col>
 </g-flex>
-<g-box title="自定义按钮" mode="empty"></g-box>
+<g-box title="自定义按钮"></g-box>
 <g-flex g-class="demo-flex">
   <g-col g-class="demo-col" span="12"><g-button g-class="custom-btn" type="primary">自定义按钮</g-button></g-col>
 </g-flex>

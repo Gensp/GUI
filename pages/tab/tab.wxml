@@ -1,24 +1,24 @@
 <!--pages/tabs/tabs.wxml-->
-<g-box title="基础布局" mode="empty"></g-box>
+<g-box title="基础布局"></g-box>
 <g-tabs active="{{active1}}" bindintap="inTapTab1">
   <g-tab key="t1" value="菜单1"></g-tab>
   <g-tab key="t2" value="菜单2"></g-tab>
   <g-tab key="t3" value="菜单3"></g-tab>
 </g-tabs>
 
-<g-box title="滚动Tab" mode="empty"></g-box>
+<g-box title="滚动Tab"></g-box>
 <g-tabs scroll active="{{active2}}" bindintap="inTapTab2">
   <g-tab wx:for="{{tabData}}" wx:key="{{index}}" key="{{item.key}}" value="{{item.value}}"></g-tab>
 </g-tabs>
 
-<g-box title="自定义颜色" mode="empty"></g-box>
+<g-box title="自定义颜色"></g-box>
 <g-tabs active="{{active3}}" color="#66cc5e" bindintap="inTapTab3">
   <g-tab key="t1" value="菜单1"></g-tab>
   <g-tab key="t2" value="菜单2"></g-tab>
   <g-tab key="t3" value="菜单3"></g-tab>
 </g-tabs>
 
-<g-box title="通过组件外wxss自定义" mode="empty"></g-box>
+<g-box title="通过组件外wxss自定义"></g-box>
 <g-tabs g-class="demo-tabs" active="{{active4}}" bindintap="inTapTab4">
   <g-tab g-class="{{item.key == active4?'demo-tab-color':''}}" b-class="{{item.key == active4?'demo-tab-border':''}}" key="{{item.key}}" value="{{item.value}}" wx:for="{{customData}}" wx:key="{{index}}"></g-tab>
 </g-tabs>

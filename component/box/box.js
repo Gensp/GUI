@@ -13,10 +13,10 @@ Component({
       value:''
     },
 
-    //可选：border、empty
+    //可选：border
     mode:{
       type: String,
-      value: 'border'
+      value: ''
     }
 
   },
