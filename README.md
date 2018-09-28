@@ -1,3 +1,6 @@
+ 
+![image](https://github.com/Gensp/GUI/blob/master/images/gui.png)
+
 # GUI
 GUI 一款基于小程序规范的组件库，简单、易用、可扩展
 
@@ -28,6 +31,9 @@ GUI 一款基于小程序规范的组件库，简单、易用、可扩展
 <g-input placeholder='我可以自动获取焦点' focus bindchange="inChange" bindfocus="inFocus" bindblur="inBlur" bindconfirm="inConfirm" />
 
 ```
+
+## 预览所有组件
+在GitHub下载代码后，直接用微信web开发者工具新建小程序打开即可。
 
 ## 更新日志
  v1.0.0(2018-09-27)
