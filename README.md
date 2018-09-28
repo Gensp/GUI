@@ -1,10 +1,12 @@
  
-![image](https://github.com/Gensp/GUI/blob/master/images/gui.png)
+<p align="center">
+  <image src="https://github.com/Gensp/GUI/blob/master/images/gui.png" />
+</p>
 
 # GUI
 GUI 一款基于小程序规范的组件库，简单、易用、可扩展
 
-![image](https://github.com/Gensp/GUI/blob/c30e536ae8be5fcedab835020076122a06a888b1/qrcode.jpg)
+![GUI-QRCODE](https://github.com/Gensp/GUI/blob/c30e536ae8be5fcedab835020076122a06a888b1/qrcode.jpg)
 
 使用微信扫一扫体验小程序组件示例
 
