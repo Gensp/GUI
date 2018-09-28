@@ -8,8 +8,6 @@ GUI 一款基于小程序规范的组件库
 ## 文档
 前端小哥正在整理中...
 
-## 快速上手
-
 ## 使用之前
 在开始使用 GUI 之前，您需了解 [微信小程序自定义组件](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/) 的相关文档
 
