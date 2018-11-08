@@ -23,4 +23,5 @@
       <g-button type='danger' bindintap="inToggleDrawerLeft">关闭</g-button>
     </g-drawer>
   </view>
+
 </view>

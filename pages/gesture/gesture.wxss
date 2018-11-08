@@ -1,0 +1,4 @@
+/* pages/gesture/gesture.wxss */
+.custom-btn{
+  border-radius: 0!important;
+}

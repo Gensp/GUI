@@ -25,6 +25,11 @@ Component({
     height: {
       type: String,
       value: ''
+    },
+    //显隐动画
+    animate: {
+      type: Boolean,
+      value: true
     }
   },
 

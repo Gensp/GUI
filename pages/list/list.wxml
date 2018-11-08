@@ -8,7 +8,7 @@
     <view>我是内容1</view>
     <view>我是内容2</view>
   </g-list>
-  <g-list mode="border" title="居中显示" vertical>
+  <g-list title="居中显示" vertical>
     <view>我是内容1</view>
     <view>我是内容2</view>
   </g-list>

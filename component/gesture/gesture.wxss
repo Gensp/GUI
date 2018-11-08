@@ -1,0 +1,22 @@
+/* component/gesture/gesture.wxss */
+.slide-box{
+  overflow: hidden;
+}
+.slide-bar{
+  position: relative;
+	transition: transform .2s ease-in-out;
+}
+.slide-bar.left .slide-right,
+.slide-bar.right .slide-left{
+  position: absolute;
+  top: 0;
+  height: 100%;
+}
+.slide-bar.left .slide-right{
+  right: 0;
+  transform: translateX(100%);
+}
+.slide-bar.right .slide-left{
+  left: 0;
+  transform: translateX(-100%);
+}

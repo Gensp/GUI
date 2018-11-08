@@ -1,6 +1,6 @@
 {
   "component": true,
   "usingComponents": {
-    "g-list": "/component/list/list"
+    "g-list": "../list/list"
   }
 }

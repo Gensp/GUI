@@ -52,6 +52,11 @@ Component({
     ellipsis:{
       type: Boolean,
       value: false  
+    },
+
+    isborder: {
+      type: Boolean,
+      value: true
     }
 
   },

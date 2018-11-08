@@ -1,0 +1,18 @@
+<!--component/gesture/gesture.wxml-->
+<view class='g-class slide-box'>
+  <view class='slide-bar {{direction}}' style='transform:translateX({{state?(direction=="left"?-stepx:stepx):0}}rpx)'>
+
+    <!-- 左滑 -->
+    <block wx:if="{{ direction == 'left'}}">
+      <view class='slide-left' bindtouchstart='inTouchStart' bindtouchend='inTouchEnd'><slot name="left"></slot></view>
+      <view class='slide-right' style="width:{{stepx}}rpx;"><slot name="right"></slot></view>
+    </block>
+
+    <!-- 右滑 -->
+    <block wx:if="{{ direction == 'right'}}">
+      <view class='slide-left' style="width:{{stepx}}rpx;"><slot name="left"></slot></view>
+      <view class='slide-right' bindtouchstart='inTouchStart' bindtouchend='inTouchEnd'><slot name="right"></slot></view>
+    </block>
+
+  </view>
+</view>

@@ -45,6 +45,7 @@ Page({
         list: [
           { val: 'Drawer 抽屉', path: '/pages/drawer/drawer' },
           { val: 'Tab 选项卡', path: '/pages/tab/tab' },
+          { val: 'Gesture 手势', path: '/pages/gesture/gesture' },
           //{ val: 'Tag 标签', path: '/pages/tag/tag' },
           //{ val: 'Badge 徽章', path: '/pages/badge/badge' },
           { val: 'Line 文本省略 (单行、多行)', path: '/pages/line/line' }

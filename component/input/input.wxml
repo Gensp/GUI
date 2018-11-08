@@ -1,5 +1,5 @@
 <!--component/input/input.wxml-->
-<view class="g-class g-cell g-flex g-{{mode}} {{error?'g-input-error':''}}">
+<view class="g-class g-cell g-flex {{isborder?'borbom':''}} {{mode?('g-'+mode):''}} {{error?'g-input-error':''}}">
   <view class="g-cell-hd d-class {{disabled?'disabled':''}}" wx:if="{{title}}">{{title}}</view>
   <view class="g-cell-bd d-class">
     <textarea wx:if="{{type === 'textarea'}}"
@@ -8,7 +8,7 @@
     	focus="{{focus}}"
     	value="{{value}}"
     	placeholder='{{placeholder}}' 
-    	placeholder-style='{{placeholderstyle?placeholderstyle:""}}'
+    	placeholder-style='{{placeholderstyle}}'
     	disabled="{{disabled}}"
       confirm-type="{{confirmtype}}"
     	bindfocus="inFocus"
@@ -23,7 +23,7 @@
     	focus="{{focus}}"
     	value="{{value}}"
     	placeholder='{{placeholder}}' 
-    	placeholder-style="{{placeholderstyle?placeholderstyle:''}}"
+    	placeholder-style="{{placeholderstyle}}"
     	disabled="{{disabled}}"
       confirm-type="{{confirmtype}}"
     	bindfocus="inFocus"
@@ -32,4 +32,5 @@
     	bindconfirm="inConfirm"
     />
   </view>
+  <slot></slot>
 </view>

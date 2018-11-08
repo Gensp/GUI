@@ -1,0 +1,14 @@
+<!--pages/gesture/gesture.wxml-->
+<g-box mode="border" title="左滑删除">
+  <g-gesture wx:for="{{gestureLeft}}" wx:key="{{item.id}}" state="{{item.state}}" bindinleft="inToggleLeft" bindinreset="inResetLeft" key="{{index}}">
+    <g-list slot="left">左滑{{item.id}}</g-list>
+    <g-button slot="right" g-class="custom-btn" type="danger">删 除</g-button>
+  </g-gesture>
+</g-box>
+
+<g-box mode="border" title="右滑展示">
+  <g-gesture wx:for="{{gestureRight}}" wx:key="{{item.id}}" state="{{item.state}}" bindinright="inToggleRight" bindinreset="inResetRight" key="{{index}}" direction="right">
+    <g-button slot="left" g-class="custom-btn" type="primary">展示</g-button>
+    <g-list slot="right">右滑{{item.id}}</g-list>
+  </g-gesture>
+</g-box>

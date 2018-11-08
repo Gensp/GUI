@@ -10,13 +10,16 @@
   z-index: 49;
   width: 100%;
   height: 100%;
-  background-color: rgba(47, 64, 80, .28);
+  background-color: rgba(0, 0, 0, .5);
 }
 .g-fixed-bar{
   z-index: 50;
   box-sizing: border-box;
   background-color: #fff;
-  transition: all ease .3s;
+  transition: transform ease 0s;
+}
+.animate.g-fixed-bar{
+  transition: transform ease .3s;
 }
 .g-mask-show,
 .g-drawer-show{

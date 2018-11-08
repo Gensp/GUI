@@ -1,5 +1,5 @@
 <!--component/list/list.wxml-->
-<view class="g-class g-cell {{link?'g-link':''}} g-flex {{error?'g-input-error':''}} {{mode?('g-'+mode):''}}">
+<view class="g-class g-cell {{isborder?'border':''}} {{link?'g-link':''}} g-flex {{error?'g-input-error':''}} {{mode?('g-'+mode):''}}">
   <view class='g-icon' wx:if="{{avatar}}"><image class='img-avatar' src="{{avatar}}" /></view>
   <view class="g-icon {{vertical?'vertical':''}}" wx:if="{{icon}}"><image class='img-icon' src="{{icon}}" /></view>
   <view class="g-cell-hd {{vertical || avatar?'vertical':''}}" wx:if="{{title}}">{{title}}</view>
