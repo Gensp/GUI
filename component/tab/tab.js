@@ -18,6 +18,11 @@ Component({
       value: ''
     },
 
+    index: {
+      type: Number,
+      value: ''
+    },
+
     value:{
       type:String,
       value: ''
@@ -49,7 +54,7 @@ Component({
 
     inTap(e){
       const parent = this.getRelationNodes('../tabs/tabs')[0];
-      parent.emitEvent(this.data.key);
+      parent.emitEvent({ 'key': this.data.key, 'index': this.data.index });
     },
   }
 })

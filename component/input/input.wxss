@@ -9,15 +9,8 @@
   display: flex;
 	flex-flow: row;
 	position: relative;
+  background-color: #fff;
 	box-shadow: 0 10rpx 20rpx rgba(0,0,0, .01);
-}
-.g-cell-bd{
-	flex: 1;
-	overflow: hidden;
-}
-.g-cell-hd{
-	width: 200rpx;
-	color: #777;
 }
 .g-cell-hd,
 .g-input{
@@ -25,14 +18,22 @@
 	min-height: 88rpx;
   line-height: 48rpx;
 	padding: 20rpx 30rpx;
-	background-color: #fff;
   box-sizing: border-box;
+}
+.g-cell-bd{
+	flex: 1;
+	overflow: hidden;
+}
+.g-cell-hd{
+	width: 170rpx;
+	color: #666;
+  padding-right: 0;
 }
 .g-input{
   height: 88rpx;
 }
 .g-cell-hd + .g-cell-bd .g-input{
-  padding-left: 0;
+  padding-left: 30rpx;
 }
 .g-cell-hd.disabled,
 .g-input.disabled{
@@ -43,8 +44,9 @@ textarea.g-input{
   height: 200rpx;
   padding-top: 12rpx;
   padding-bottom: 12rpx;
+  padding-left: 20rpx!important;
 }
-.g-cell::before{
+.g-cell.borbom::before{
 	content: '';
 	position: absolute;
   z-index: 2;

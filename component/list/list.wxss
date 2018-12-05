@@ -29,7 +29,11 @@
   background-color: #fff;
 	box-shadow: 0 10rpx 20rpx rgba(0,0,0, .01);
 }
-.g-cell::before{
+.disabled{
+  background-color: #f9f9f9;
+  color: #999;
+}
+.g-cell.border::before{
 	content: '';
 	position: absolute;
   z-index: 2;
@@ -40,38 +44,40 @@
 	border-bottom: 1px solid rgba(0,0,0, .05);
 	transform: scaleY(.5);
 }
-.g-cell-bd{
-	flex: 1;
-	overflow: hidden;
-}
-.g-cell-hd{
-	width: 140rpx;
-	color: #777;
-}
 .g-cell-hd,
 .g-cell-bd{
   position: relative;
-	min-height: 48rpx;
+	min-height: 88rpx;
 	line-height: 48rpx;
 	padding: 20rpx 30rpx;
   overflow: hidden;
+  box-sizing: border-box;
+}
+.g-cell-hd{
+	width: 170rpx;
+  color: #666;
+  padding-right: 0;
+}
+.g-cell-bd{
+	flex: 1;
+	overflow: hidden;
 }
 .g-cell-bd.ellipsis{
   height: 48rpx;
 }
 .g-cell-hd + .g-cell-bd{
-  padding-left: 0;
+  padding-left: 30rpx;
 }
 .g-icon + .g-cell-hd,
 .g-icon + .g-cell-bd{
   padding-left: 14rpx;
 }
 .g-icon{
-  padding: 20rpx 0 12rpx 30rpx;
+  padding: 20rpx 10rpx 12rpx 30rpx;
 }
 .img-icon {
-  width: 48rpx;
-  height: 48rpx;
+  width: 42rpx;
+  height: 42rpx;
 }
 .img-avatar{
   width: 80rpx;
@@ -88,8 +94,8 @@
   display: inline-block;
   width: 18rpx;
   height: 18rpx;
-  border-top: 2rpx solid #ddd;
-  border-right:2rpx solid #ddd;
+  border-top: 2rpx solid #a4a8ac;
+  border-right:2rpx solid #a4a8ac;
   transform: rotate(45deg);
 }
 .g-radius{

@@ -3,7 +3,7 @@ Component({
 
   behaviors: ['wx://form-field'],
 
-  externalClasses: ['g-class', 'd-class', 'i-class'],
+  externalClasses: ['g-class', 'h-class', 'b-class', 'i-class'],
 
   /**
    * 组件的属性列表

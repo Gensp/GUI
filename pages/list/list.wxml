@@ -12,6 +12,7 @@
     <view>我是内容1</view>
     <view>我是内容2</view>
   </g-list>
+  <g-list title="我是标题" disabled>我被禁用了</g-list>
 </g-box>
 
 <g-box mode="border" title="带箭头">

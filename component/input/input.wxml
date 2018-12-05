@@ -1,7 +1,7 @@
 <!--component/input/input.wxml-->
 <view class="g-class g-cell g-flex {{isborder?'borbom':''}} {{mode?('g-'+mode):''}} {{error?'g-input-error':''}}">
-  <view class="g-cell-hd d-class {{disabled?'disabled':''}}" wx:if="{{title}}">{{title}}</view>
-  <view class="g-cell-bd d-class">
+  <view class="g-cell-hd h-class {{disabled?'disabled':''}}" wx:if="{{title}}">{{title}}</view>
+  <view class="g-cell-bd b-class">
     <textarea wx:if="{{type === 'textarea'}}"
     	class="g-input i-class {{align}} {{disabled?'disabled':''}}" 
     	maxlength="{{maxlength}}"

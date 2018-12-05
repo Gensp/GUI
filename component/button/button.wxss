@@ -78,11 +78,11 @@ button.g-btn-default.g-btn-disabled{
   background-color: rgba(255,255,255,.8);
 }
 button.g-btn-primary.g-btn-disabled{
-  color: rgba(255,255,255, .4);
+  color: rgba(255,255,255, .5);
   background-color: rgba(44,169,225,.8);
 }
 button.g-btn-danger.g-btn-disabled{
-  color: rgba(255,255,255, .4);
+  color: rgba(255,255,255, .5);
   background-color: rgba(240,95,95,.8);
 }
 button.g-btn-plain.g-btn-primary.g-btn-disabled{

@@ -17,6 +17,12 @@ Component({
       value: 'list'
     },
 
+    //索引值
+    index: {
+      type: Number,
+      value: 0
+    },
+
     value:{
       type: String,
       value:''
@@ -65,7 +71,7 @@ Component({
     inChange(e){
       const me = this;
       if (me.data.disabled) return;
-      const item = { active: !me.data.checked, value: me.data.value };
+      const item = { active: !me.data.checked, value: me.data.value, index: me.data.index };
       const parent = me.getRelationNodes('../radio-group/radio-group')[0];
       parent ? parent.emitEvent(item) : me.triggerEvent('inchange', item);
     }

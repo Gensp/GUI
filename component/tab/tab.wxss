@@ -2,6 +2,7 @@
 .g-tab-item{
   flex:1;
   position: relative;
+  z-index: 2;
   overflow: hidden;
   padding:0 20rpx;
 }

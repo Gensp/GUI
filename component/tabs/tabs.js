@@ -55,8 +55,8 @@ Component({
       }
     },
 
-    emitEvent(key) {
-      this.triggerEvent('intap', { 'key': key });
+    emitEvent(params) {
+      this.triggerEvent('intap', params);
     }
   }
 })

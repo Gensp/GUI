@@ -1,6 +1,6 @@
 // component/list/list.js
 Component({
-  externalClasses: ['g-class'],
+  externalClasses: ['g-class', 'h-class', 'b-class'],
 
   /**
    * 组件的属性列表
@@ -57,6 +57,11 @@ Component({
     isborder: {
       type: Boolean,
       value: true
+    },
+
+    disabled: {
+      type: Boolean,
+      value: false
     }
 
   },

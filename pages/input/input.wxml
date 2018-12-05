@@ -22,8 +22,8 @@
 </g-box>
 <g-box mode="border" title="圆角" mode="empty"></g-box>
 <g-box mode="border" g-class="demo-box" mode="empty">
-  <g-input g-class="demo-radius" d-class="demo-title" i-class="demo-input" placeholder='我的角是圆的，样式也是自定义的' mode="radius" />
-  <g-input g-class="demo-radius" d-class="demo-title" i-class="demo-input" title="我是标题" placeholder='我是提示' mode="radius" />
-  <g-input g-class="demo-radius" d-class="demo-title" i-class="demo-input" title="我是标题" placeholder='我也犯错了' mode="radius" error />
+  <g-input g-class="demo-radius" h-class="demo-title" i-class="demo-input" placeholder='我的角是圆的，样式也是自定义的' mode="radius" />
+  <g-input g-class="demo-radius" h-class="demo-title" i-class="demo-input" title="我是标题" placeholder='我是提示' mode="radius" />
+  <g-input g-class="demo-radius" h-class="demo-title" i-class="demo-input" title="我是标题" placeholder='我也犯错了' mode="radius" error />
 </g-box>
 
