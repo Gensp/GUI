@@ -15,6 +15,10 @@
 </g-box>
 <g-box mode="border" title="ChangeLog">
   <g-list>
+    <g-size strong>V1.0.1(2018-12-20)</g-size>
+    <g-size g-class="color-gray" size="h6">- 新增Gesture、Region组件</g-size>
+  </g-list>
+  <g-list>
     <g-size strong>V1.0.0(2018-09-27)</g-size>
     <g-size g-class="color-gray" size="h6">- 初始版本</g-size>
   </g-list>

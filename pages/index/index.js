@@ -48,6 +48,7 @@ Page({
           { val: 'Gesture 手势', path: '/pages/gesture/gesture' },
           //{ val: 'Tag 标签', path: '/pages/tag/tag' },
           //{ val: 'Badge 徽章', path: '/pages/badge/badge' },
+          { val: 'Region 省市区', path: '/pages/region/region' },
           { val: 'Line 文本省略 (单行、多行)', path: '/pages/line/line' }
         ]
       }

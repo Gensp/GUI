@@ -1,0 +1,22 @@
+<!--pages/region.wxml-->
+<g-box mode="border" title="省">
+  <g-list title="联系地址" link bindtap="inToggle" data-type="province">
+    {{val.province?(val.province.province.value):"请选择"}}
+  </g-list>
+</g-box>
+<g-region level="1" state="{{state.province}}" value='{{actProvince}}' bindenter="inToggle" bindcancel="inToggle" data-type="province"/>
+
+<g-box mode="border" title="省-市">
+  <g-list title="联系地址" link bindtap="inToggle" data-type="city">
+    {{val.city?(val.city.province.value + '-' + val.city.city.value):"请选择"}}
+  </g-list>
+</g-box>
+<g-region level="2" state="{{state.city}}" value='{{actCity}}' bindenter="inToggle" bindcancel="inToggle" data-type="city"/>
+
+<g-box mode="border" title="省-市-区">
+  <g-list title="联系地址" link bindtap="inToggle" data-type="area">
+    {{val.area?(val.area.province.value + '-' + val.area.city.value + '-' + val.area.area.value):"请选择"}}
+  </g-list>
+</g-box>
+<g-region level="3" state="{{state.area}}" value='{{actArea}}' bindenter="inToggle" bindcancel="inToggle" data-type="area"/>
+

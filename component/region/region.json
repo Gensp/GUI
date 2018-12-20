@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "g-drawer": "/component/drawer/drawer"
+  }
+}

@@ -1,0 +1,32 @@
+<!--component/gui/region/region.wxml-->
+<g-drawer position="bottom" height="45%" show="{{state}}" bindinmask="inCancel">
+  <view class='g-region'>
+    <view class='flex-bar g-region-title' wx:if="{{params.province.value || params.city.value || params.area.value}}">
+      <view class='flex1 flex-bar'>
+        <view>{{params.province.value }}</view>
+        <view class="ml30" wx:if="{{level > 1}}">{{ params.city.value }}</view>
+        <view class="ml30" wx:if="{{level > 2}}">{{ params.area.value }}</view>
+      </view>
+      <view class='color-blue enter-btn' bindtap='inEnter'>确 定</view>
+    </view>
+    <view class='flex-bar g-region-title' wx:else>
+      <view class='flex1 color-gray'>请选择：</view>
+    </view>
+    <view class='flex-bar g-region-box'>
+      <!-- 省 -->
+      <scroll-view class="item-scroll" scroll-y scroll-into-view="{{isscroll1?('id-'+actData[0]):''}}">
+        <view id='id-{{index}}' class='item {{actData[0] == index?"active":"" }}' wx:for="{{jsonData}}" wx:key="{{index}}" bindtap='inChange' data-index="{{index}}" data-type="1"><text>{{item.value}}</text></view>
+      </scroll-view>
+
+      <!-- 市 -->
+      <scroll-view class="item-scroll" wx:if="{{level > 1}}" scroll-y scroll-into-view="{{isscroll2?('id-'+actData[1]):''}}">
+        <view id='id-{{index}}' class='item {{actData[1] == index?"active":"" }}' wx:for="{{jsonData[actData[0]].childs}}" wx:key="{{index}}" bindtap='inChange' data-index="{{index}}" data-type="2"><text>{{item.value}}</text></view>
+      </scroll-view>
+
+      <!-- 区 -->
+      <scroll-view class="item-scroll" wx:if="{{level > 2}}" scroll-y scroll-into-view="{{isscroll3?('id-'+actData[2]):''}}">
+        <view id='id-{{index}}' class='item {{actData[2] == index?"active":"" }}' wx:for="{{jsonData[actData[0]].childs[actData[1]].childs}}" bindtap='inChange' wx:key="{{index}}" data-index="{{index}}" data-type="3"><text>{{item.value}}</text></view>
+      </scroll-view>
+    </view>
+  </view>
+</g-drawer>

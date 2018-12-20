@@ -1,0 +1,92 @@
+/* component/gui/region/region.wxss */
+.ml30{
+  margin-left: 30rpx;
+}
+.color-gray{
+  color: #737b82;
+}
+.color-blue{
+  color: #2ca9e1;
+}
+.flex-bar{
+  display: flex;
+  flex-flow: row;
+}
+.g-region-box scroll-view,
+.flex1{
+  flex: 1;
+  overflow: hidden;
+}
+scroll-view{
+  height: 100%;
+}
+.item-scroll:nth-child(even){
+  background-color: #f8f8f8;
+}
+.g-region{
+  height: 100%;
+}
+.g-region-title{
+  position: relative;
+  height: 88rpx;
+  line-height: 88rpx;
+}
+.item text::after,
+.g-region-title::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  border-bottom: 1px solid rgba(0,0,0, .1);
+  display: block;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  bottom: -1px;
+}
+.g-region-title > view{
+  padding: 0 30rpx;
+}
+.g-region-box{
+  height: calc(100% - 88rpx);
+}
+.item{
+  position: relative;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding:0 20rpx;
+  color: #666;
+  font-size: 24rpx;
+}
+.enter-btn:active,
+.item:active{
+  opacity: .7;
+}
+.item text{
+  display: block;
+  position: relative;
+}
+.item.active{
+  color: #2ca9e1;
+}
+.item.active::after,
+.item.active::before{
+  content: '';
+  position: absolute;
+  display: block;
+  background-color: #2ca9e1;
+}
+.item.active::after{
+  width: 24rpx;
+  height: 4rpx;
+  right: 26rpx;
+  bottom: 36rpx;
+  transform: rotate(-45deg);
+}
+.item.active::before{
+  height: 12rpx;
+  width: 4rpx;
+  right: 48rpx;
+  bottom: 28rpx;
+  transform: rotate(-45deg);
+}
