@@ -176,6 +176,7 @@ Component({
           //setAct = 'actData[2]';
           me.setData({
             'actData[2]': getData.index,
+            'isscroll3': false,
           })
           me.inSetArea();
         break;

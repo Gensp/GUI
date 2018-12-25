@@ -64,7 +64,11 @@ scroll-view{
 }
 .item text{
   display: block;
+  max-width: calc(100% - 20rpx);
   position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .item.active{
   color: #2ca9e1;
