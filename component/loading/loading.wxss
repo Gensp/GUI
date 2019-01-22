@@ -1,5 +1,7 @@
 /* component/loading/loading.wxss */
-.g-loading{
+.g-loading,
+.g-loading-box{
+  position: relative;
   padding: 30rpx 0;
 }
 .g-loading::after{
@@ -24,5 +26,47 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+.g-loading-box{
+  height: 44rpx;
+}
+.g-loading-box::before,
+.g-loading-box::after{
+  content: "";
+  width: 44rpx;
+  left: 50%;
+  margin-left: -22rpx;
+  position: absolute;
+}
+.g-loading-box::before{
+  height: 10rpx;
+  border-radius: 50%;
+  background-color: rgba(0,0,0, .1);
+  bottom: 12rpx;
+  animation: shadow .5s linear infinite;
+}
+.g-loading-box::after{
+  height: 44rpx;
+  border-radius: 8rpx;
+  background: rgba(44, 169, 225, 1);
+  animation: loading-box .5s linear infinite;
+}
+@keyframes loading-box{
+  17% {
+      border-bottom-right-radius: 8rpx;
+  }
+  25% {
+      transform: translateY(10rpx) rotate(22.5deg);
+  }
+  50% {
+      transform: translateY(20rpx) scale(1, 0.9) rotate(45deg);
+      border-bottom-right-radius: 40rpx;
+  }
+  75% {
+      transform: translateY(10rpx) rotate(67.5deg);
+  }
+  100% {
+      transform: translateY(0) rotate(90deg);
   }
 }

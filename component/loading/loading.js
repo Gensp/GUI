@@ -9,6 +9,12 @@ Component({
     show:{
       type:Boolean,
       value: true
+    },
+
+    //default || box
+    mode:{
+      type: String,
+      value: 'default'
     }
   },
 

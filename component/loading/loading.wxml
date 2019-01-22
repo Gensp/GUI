@@ -1,2 +1,3 @@
 <!--component/loading/loading.wxml-->
-<view class='g-class g-loading' hidden="{{!show}}"></view>
+<view wx:if="{{mode=='default'}}" class='g-class g-loading' hidden="{{!show}}"></view>
+<view wx:if="{{mode=='box'}}" class='g-class g-loading-box' hidden="{{!show}}"></view>
