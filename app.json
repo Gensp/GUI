@@ -17,7 +17,8 @@
     "pages/size/size",
     "pages/gui/gui",
     "pages/gesture/gesture",
-    "pages/region/region"
+    "pages/region/region",
+    "pages/clip/clip"
   ],
   "window": {
     "backgroundTextStyle": "light",

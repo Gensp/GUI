@@ -86,7 +86,7 @@
 }
 .g-mask{
   z-index: 49;
-   background-color: rgba(47, 64, 80, .28);
+  background-color: rgba(47, 64, 80, .28);
 }
 .g-fixed-bar{
   z-index: 50;
@@ -97,7 +97,7 @@
   -webkit-box-orient:vertical; 
   box-orient:vertical;
   -webkit-box-align:center;
-  box-align:center; 
+  box-align:center;
 }
 .g-modal-bar{
   width: 560rpx;
@@ -124,4 +124,20 @@
   height: 144rpx;
   margin: 32rpx 0 16rpx;
   border-radius: 12rpx;
+}
+.animate{
+  animation-duration: .3s;
+}
+.zoomIn {
+  animation-name: zoomIn;
+}
+@keyframes zoomIn{
+  0%{
+    opacity: 0;
+    transform: scale(1.2);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
 }

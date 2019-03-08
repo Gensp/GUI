@@ -20,7 +20,7 @@
   -webkit-box-pack:center; 
   box-pack:center;
   -webkit-box-orient:vertical; 
-  box-orient:vertical
+  box-orient:vertical;
 }
 .g-cell{
   display: flex;
@@ -86,7 +86,6 @@
 }
 .g-arrow{
   position: relative;
-  height: 100%;
   width: 60rpx;
 }
 .g-arrow::after{
@@ -94,8 +93,8 @@
   display: inline-block;
   width: 18rpx;
   height: 18rpx;
-  border-top: 2rpx solid #a4a8ac;
-  border-right:2rpx solid #a4a8ac;
+  border-top: 4rpx solid #ced0d6;
+  border-right: 4rpx solid #ced0d6;
   transform: rotate(45deg);
 }
 .g-radius{

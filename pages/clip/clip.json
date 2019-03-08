@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "g-box": "/component/box/box",
+    "g-clip": "/component/clip/clip",
+    "g-button": "/component/button/button"
+  }
+}

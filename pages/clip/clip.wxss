@@ -1,0 +1,4 @@
+/* pages/clip/clip.wxss */
+.wrap{
+  padding:0 30rpx;
+}

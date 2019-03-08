@@ -1,0 +1,6 @@
+<!--pages/clip/clip.wxml-->
+<g-box title="图片裁切"></g-box>
+<view class='wrap'>
+  <g-button type="primary" bindintap="inUploadImg">上传图片</g-button>
+  <g-clip wx:if="{{clipData.state}}" imgurl="{{clipData.imgurl}}" bindincancel="inToggleClip" bindinsuccess="inToggleClip" />
+</view>

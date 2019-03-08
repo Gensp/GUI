@@ -6,5 +6,5 @@
   <view class="g-cell-bd b-class {{align}} {{ellipsis?'ellipsis':''}} {{avatar?'vertical':''}}">
     <slot></slot>
   </view>
-  <view wx:if="{{link}}"><view class='g-arrow vertical'></view></view>
+  <view class='vertical' wx:if="{{link}}"><view class='g-arrow'></view></view>
 </view>

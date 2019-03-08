@@ -1,6 +1,6 @@
 <!--component/modal/modal.wxml-->
 <view class='g-class-mask g-mask' hidden="{{!show}}"></view>
-<view class='g-class g-fixed-bar' hidden="{{!show}}">
+<view class='g-class g-fixed-bar animate {{show?"zoomIn":""}}' hidden="{{!show}}">
   <view class='g-modal-bar'>
     <view class='g-modal-cen'>
       <image class='g-mapping' wx:if="{{types == 'success'}}" src='{{imgurl.success}}' mode='aspectFill' />

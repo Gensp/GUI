@@ -43,6 +43,7 @@ Page({
       {
         title: '视图',
         list: [
+          { val: 'Clip 裁切', path: '/pages/clip/clip' },
           { val: 'Drawer 抽屉', path: '/pages/drawer/drawer' },
           { val: 'Tab 选项卡', path: '/pages/tab/tab' },
           { val: 'Gesture 手势', path: '/pages/gesture/gesture' },

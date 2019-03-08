@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 16,
+			"current": 17,
 			"list": [
 				{
 					"id": -1,
@@ -136,6 +136,13 @@
 					"name": "region",
 					"pathName": "pages/region/region",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "clip",
+					"pathName": "pages/clip/clip",
+					"query": "",
+					"scene": null
 				}
 			]
 		}
