@@ -1,0 +1,4 @@
+<!--pages/indexes/indexes.wxml-->
+<g-indexes>
+  <view wx:for="{{50}}" wx:key="{{index}}">{{index}}</view>
+</g-indexes>

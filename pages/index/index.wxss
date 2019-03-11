@@ -1,4 +1,7 @@
 /**index.wxss**/
+page{
+  padding-bottom: 30rpx;
+}
 .wrap{
   text-align: center;
   padding: 60rpx 30rpx;

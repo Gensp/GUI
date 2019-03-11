@@ -1,6 +1,6 @@
 <!--component/clip/clip.wxml-->
 <view class='g-class g-clip-bar {{isIPX}}'>
-  <canvas canvas-id='g-clip-canvas' class='g-clip-canvas' style='width:{{canvasData.isWH?canvasData.imgw:canvasData.imgh}}px;height:{{canvasData.isWH?canvasData.imgw:canvasData.imgh}}px;' />
+  <canvas canvas-id='g-clip-canvas' class='g-clip-canvas' style='width:{{canvasData.wh}}px;height:{{canvasData.wh}}px;' />
   <view class='g-clip-top'>
     <view id="g-clip-box" class='g-clip-box'>
       <view class='g-clip-area' bindtouchstart='inTouchStart' bindtouchmove='inTouchMove' bindtouchend='inTouchEnd'>

@@ -1,0 +1,19 @@
+/* pages/grid/grid.wxss */
+.custom-grid{
+  background-color: #fff;
+}
+.custom-col{
+  height: 120rpx;
+  display:box; 
+  display:-webkit-box;
+  -webkit-box-pack:center; 
+  box-pack:center;
+  -webkit-box-orient:vertical; 
+  box-orient:vertical;
+  -webkit-box-align:center;
+  box-align:center; 
+}
+.custom-link:active{
+  opacity: .7;
+  background-color: rgba(0,0,0, .05);
+}

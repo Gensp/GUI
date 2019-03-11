@@ -1,0 +1,27 @@
+/* component/grid/grid.wxss */
+.g-grid{
+  position: relative;
+}
+.g-border::before{
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  box-sizing: border-box;
+  border-bottom:1px solid #ddd;
+  transform: scaleY(.5);
+}
+.g-grid::after{
+  content:"";
+  display:table;
+  clear:both;
+}
+.g-grid.tc{
+  text-align: center
+}
+.g-grid.tr{
+  text-align: right
+}

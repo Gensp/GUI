@@ -1,0 +1,4 @@
+<!--component/indexes/indexes.wxml-->
+<scroll-view class='g-class scroll-view' scroll-into-view="" scroll-y>
+  <slot></slot>
+</scroll-view>

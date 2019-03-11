@@ -1,5 +1,6 @@
 /* component/col/col.wxss */
 .g-col{
+  position: relative;
   float:left;
   box-sizing: border-box;
 }
@@ -10,7 +11,7 @@
   width: 91.66666667%;
 }
 .g-col-10 {
-  width: 83.33333333%; float:left
+  width: 83.33333333%;
 }
 .g-col-9 {
   width: 75%;
@@ -74,4 +75,21 @@
 }
 .g-offset-1 {
   margin-left: 8.33333333%;
+}
+.g-grid-border::after{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  box-sizing: border-box;
+  pointer-events: none;
+  border-bottom:1px solid #ddd;
+  border-left: 1px solid #ddd;
+  transform: scale(.5);
+  margin-left: -1px;
 }

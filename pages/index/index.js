@@ -6,9 +6,10 @@ Page({
     pagetitle:'GUI 一款基于小程序规范的组件库',
     itemData:[
       {
-        title:'字体', 
+        title:'文本', 
         list:[
           { val: 'Size 尺寸', path: '/pages/size/size' },
+          { val: 'Line 文本省略 (单行、多行)', path: '/pages/line/line' }
           //{ val: 'Icon 图标', path: '/pages/icon/icon' }
         ]
       },
@@ -16,6 +17,7 @@ Page({
         title: '布局',
         list: [
           { val: 'Flex 栅格', path: '/pages/flex/flex' },
+          { val: 'Grid 宫格', path: '/pages/grid/grid' },
           { val: 'List 列表', path: '/pages/list/list' },
           //{ val: 'Grid 宫格', path: '/pages/grid/grid' }
         ]
@@ -44,13 +46,13 @@ Page({
         title: '视图',
         list: [
           { val: 'Clip 裁切', path: '/pages/clip/clip' },
-          { val: 'Drawer 抽屉', path: '/pages/drawer/drawer' },
           { val: 'Tab 选项卡', path: '/pages/tab/tab' },
+          { val: 'Drawer 抽屉', path: '/pages/drawer/drawer' },
           { val: 'Gesture 手势', path: '/pages/gesture/gesture' },
+          { val: 'Indexes 索引', path: '/pages/indexes/indexes' },
           //{ val: 'Tag 标签', path: '/pages/tag/tag' },
           //{ val: 'Badge 徽章', path: '/pages/badge/badge' },
-          { val: 'Region 省市区', path: '/pages/region/region' },
-          { val: 'Line 文本省略 (单行、多行)', path: '/pages/line/line' }
+          { val: 'Region 省市区', path: '/pages/region/region' }
         ]
       }
     ]

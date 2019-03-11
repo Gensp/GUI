@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 17,
+			"current": 19,
 			"list": [
 				{
 					"id": -1,
@@ -141,6 +141,20 @@
 					"id": -1,
 					"name": "clip",
 					"pathName": "pages/clip/clip",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "宫格",
+					"pathName": "pages/grid/grid",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 19,
+					"name": "索引",
+					"pathName": "pages/indexes/indexes",
 					"query": "",
 					"scene": null
 				}

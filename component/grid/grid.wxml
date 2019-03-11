@@ -1,0 +1,2 @@
+<!--component/grid/grid.wxml-->
+<view class='g-class g-grid g-{{mode}} {{align}}'><slot></slot></view>

@@ -1,0 +1,4 @@
+/* component/indexes/indexes.wxss */
+.scroll-view{
+  height: 100%;
+}

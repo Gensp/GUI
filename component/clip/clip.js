@@ -95,11 +95,18 @@ Component({
             })
           }
 
+          
           me.setData({
             'canvasData.imgw': res.width,
             'canvasData.imgh': res.height,
             'canvasData.scale':dScale,
-            'stv.scale': me.data.canvasData.multiple//dScale
+            'stv.scale': dScale//me.data.canvasData.multiple
+          });
+
+          let { canvasData, stv } = me.data;
+          me.setData({
+            //根据宽、高(数值大的一方)计算当前图片缩放后的宽、高
+            'canvasData.wh': canvasData.isWH ? canvasData.imgw : canvasData.imgh
           });
 
           me.inCalcMaxXY();
@@ -289,12 +296,9 @@ Component({
       });
       const { stv, clipBoxData, canvasData, imgurl } = me.data;
       const canvasid = 'g-clip-canvas', ctx = wx.createCanvasContext(canvasid, me);
-      
-      //根据宽、高(数值大的一方)计算当前图片缩放后的宽、高
-      const wh = canvasData.isWH? (clipBoxData.width * stv.scale) : clipBoxData.height * stv.scale,
-
+    
         //图片在canvas画布内X、Y轴初始偏移值
-        xx = canvasData.isWH ? 0 : Math.abs((canvasData.imgw - canvasData.imgh) / 2) ,
+      const xx = canvasData.isWH ? 0 : Math.abs((canvasData.imgw - canvasData.imgh) / 2) ,
         yy = canvasData.isWH ? Math.abs((canvasData.imgh - canvasData.imgw) / 2) : 0;
 
       ctx.drawImage(imgurl, 0, 0, 
@@ -305,17 +309,17 @@ Component({
         //canvas画布长、宽
         const cw = clipBoxData.width * canvasData.multiple,
           ch = clipBoxData.height * canvasData.multiple;
-        console.log(stepX, stepY)
+          
         const dw = cw - clipBoxData.width * (stv.scale - canvasData.scale),
           dh = ch - clipBoxData.width * (stv.scale - canvasData.scale);
         wx.canvasToTempFilePath({
           fileType: 'jpg',
-          x: (dw - clipBoxData.width) / 2 - stv.offsetX,
-          y: (dh - clipBoxData.height) / 2 - stv.offsetY,
+          x: (canvasData.wh - dw) / 2 - (canvasData.wh / cw * stv.offsetX),
+          y: (canvasData.wh - dh) / 2 - (canvasData.wh / ch * stv.offsetY),
           width: dw,
           height: dh,
-          destWidth: dw,
-          destHeight: dh,
+          destWidth: cw,
+          destHeight: ch,
           canvasId: canvasid,
           success(res) {
             wx.previewImage({

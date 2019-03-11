@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "g-box": "/component/box/box",
+    "g-grid": "/component/grid/grid",
+    "g-col": "/component/col/col"
+  }
+}
