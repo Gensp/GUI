@@ -106,7 +106,7 @@ Component({
           let { canvasData, stv } = me.data;
           me.setData({
             //根据宽、高(数值大的一方)计算当前图片缩放后的宽、高
-            'canvasData.wh': canvasData.isWH ? canvasData.imgw : canvasData.imgh
+            'canvasData.imgwh': canvasData.isWH ? canvasData.imgw : canvasData.imgh
           });
 
           me.inCalcMaxXY();
@@ -306,16 +306,16 @@ Component({
         xx, yy, canvasData.imgw, canvasData.imgh);
 
       ctx.draw(false, () => {
-        //canvas画布长、宽
+        //image图片最大长、宽
         const cw = clipBoxData.width * canvasData.multiple,
           ch = clipBoxData.height * canvasData.multiple;
           
         const dw = cw - clipBoxData.width * (stv.scale - canvasData.scale),
-          dh = ch - clipBoxData.width * (stv.scale - canvasData.scale);
+          dh = ch - clipBoxData.height * (stv.scale - canvasData.scale);
         wx.canvasToTempFilePath({
           fileType: 'jpg',
-          x: (canvasData.wh - dw) / 2 - (canvasData.wh / cw * stv.offsetX),
-          y: (canvasData.wh - dh) / 2 - (canvasData.wh / ch * stv.offsetY),
+          x: (canvasData.imgwh - dw) / 2 - (canvasData.scale * stv.offsetX),
+          y: (canvasData.imgwh - dh) / 2 - (canvasData.scale * stv.offsetY),
           width: dw,
           height: dh,
           destWidth: cw,
