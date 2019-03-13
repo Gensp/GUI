@@ -100,7 +100,7 @@ Component({
             'canvasData.imgw': res.width,
             'canvasData.imgh': res.height,
             'canvasData.scale':dScale,
-            'stv.scale': dScale//me.data.canvasData.multiple
+            'stv.scale': 2.4//dScale//me.data.canvasData.multiple
           });
 
           let { canvasData, stv } = me.data;
@@ -309,15 +309,15 @@ Component({
         //image图片最大长、宽
         const cw = clipBoxData.width * canvasData.multiple,
           ch = clipBoxData.height * canvasData.multiple;
-          
-        const dw = cw - clipBoxData.width * (stv.scale - canvasData.scale),
-          dh = ch - clipBoxData.height * (stv.scale - canvasData.scale);
+        const ms = stv.scale - canvasData.scale < 1 ? (stv.scale - canvasData.scale) : (stv.scale - canvasData.scale);
+        const dw = cw - clipBoxData.width * ms,
+          dh = ch - clipBoxData.height * ms;
         wx.canvasToTempFilePath({
           fileType: 'jpg',
-          x: (canvasData.imgwh - dw) / 2 - (canvasData.scale * stv.offsetX),
-          y: (canvasData.imgwh - dh) / 2 - (canvasData.scale * stv.offsetY),
-          width: dw,
-          height: dh,
+          x: (Math.abs(stepX) - stv.offsetX) * ms + xx,
+          y: (Math.abs(stepY) - stv.offsetY) * ms + yy,
+          width: 1920 / stv.scale,
+          height: 1920 / stv.scale,
           destWidth: cw,
           destHeight: ch,
           canvasId: canvasid,
