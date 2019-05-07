@@ -10,7 +10,7 @@ Component({
     //需裁切图片路径
     imgurl:{
       type: String,
-      value: 'test.jpg'
+      value: 'ktest.jpg'
     },
 
     cancelTxt:{
@@ -309,22 +309,23 @@ Component({
         //image图片最大长、宽
         const cw = clipBoxData.width * canvasData.multiple,
           ch = clipBoxData.height * canvasData.multiple;
-        const ms = stv.scale - canvasData.scale < 1 ? (stv.scale - canvasData.scale) : (stv.scale - canvasData.scale);
+        const ms = stv.scale - canvasData.scale;
+
         const dw = cw - clipBoxData.width * ms,
           dh = ch - clipBoxData.height * ms;
         wx.canvasToTempFilePath({
           fileType: 'jpg',
-          x: (Math.abs(stepX) - stv.offsetX) * ms + xx,
-          y: (Math.abs(stepY) - stv.offsetY) * ms + yy,
-          width: 1920 / stv.scale,
-          height: 1920 / stv.scale,
+          x: (canvasData.imgwh - dw) / 2 - (canvasData.imgwh / cw * stv.scale * stv.offsetX),
+          y: (canvasData.imgwh - dh) / 2 - (canvasData.imgwh / ch * stv.scale * stv.offsetY),
+          width: dw,
+          height: dh,
           destWidth: cw,
           destHeight: ch,
           canvasId: canvasid,
           success(res) {
             wx.previewImage({
               current: res.tempFilePath,
-              urls: [res.tempFilePath] 
+              urls: [res.tempFilePath]
             });
             /*wx.saveImageToPhotosAlbum({
               filePath: res.tempFilePath,

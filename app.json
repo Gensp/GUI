@@ -47,5 +47,6 @@
         "text": "GUI"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
