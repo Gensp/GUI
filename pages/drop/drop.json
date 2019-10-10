@@ -1,0 +1,7 @@
+{
+  "disableScroll": true,
+  "usingComponents": {
+    "g-drop": "/component/drop/drop",
+    "g-button": "/component/button/button"
+  }
+}

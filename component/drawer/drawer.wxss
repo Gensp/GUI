@@ -46,6 +46,9 @@
   height: 60%;
   transform: translate3d(0, 100%, 0);
 }
+.g-drawer-bottom.isIPX{
+  padding-bottom: 34px;
+}
 .g-drawer-left{
   top: 0;
   left: 0;

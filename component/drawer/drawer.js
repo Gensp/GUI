@@ -6,18 +6,18 @@ Component({
    */
   properties: {
 
-    show:{
+    show: {
       type: Boolean,
-      value:'false'
+      value: 'false'
     },
 
     //可选：top、right、bottom、left
-    position:{
-      type:String,
-      value:'left'
+    position: {
+      type: String,
+      value: 'left'
     },
     //position为left、right时生效
-    width:{
+    width: {
       type: String,
       value: ''
     },
@@ -37,16 +37,30 @@ Component({
    * 组件的初始数据
    */
   data: {
-    
+    isIPX: wx.getSystemInfoSync().model.indexOf('iPhone X') == -1 ? '' : 'isIPX',
+    animateClass: ''
   },
-
   /**
    * 组件的方法列表
    */
   methods: {
     //点击遮罩
-    inTapMask(e){
+    inTapMask(e) {
       this.triggerEvent('inmask');
+    },
+
+    inTest() {
+      const me = this;
+      me.setData({
+        'show': true
+      })
+      setTimeout(function () {
+        me.setData({
+          'animateClass': 'g-drawer-show'
+        })
+      }, 50)
+
+      console.log(123)
     },
   }
 })

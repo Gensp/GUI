@@ -1,0 +1,13 @@
+<!--component/drop/drop.wxml margin:-{{data.height/2}}px 0 0 -{{data.width/2}}px; translate3d({{data.moveX}}px, {{data.moveY}}px, 0)-->
+<view class="g-class item-drop" style="transform: scale({{data.scale}}); top:{{data.top}}px; left:{{data.left}}px;">
+
+  <view class="drop-img {{active?'drop-active':''}}" style="transform: rotate({{data.angle}}deg);">
+  
+    <view style="position:absolute; z-index:1; top:50%; left:50%;color:#fff;">{{data.key}}</view>
+    
+    <image src="{{data.imgurl}}" style="width:{{data.width}}px;height:{{data.height}}px;" bindtouchstart='imgTouchStart' bindtouchmove='imgTouchMove' bindtouchend='imgTouchEnd' data-key="{{key}}" />
+    <view class="drop-icon drop-close" hidden="{{!active}}" hover-class="opacity" catchtap="inDelDrop" style="transform: scale({{data.oScale}});"></view>
+    <view class="drop-icon drop-scale" hidden="{{!active}}" bindtouchstart='inTouchStart' bindtouchmove='inTouchMove' bindtouchend='inTouchEnd' data-key="{{key}}" style="transform: scale({{data.oScale}});"></view>
+  </view>
+
+</view>

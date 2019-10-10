@@ -20,7 +20,8 @@
     "pages/region/region",
     "pages/clip/clip",
     "pages/grid/grid",
-    "pages/indexes/indexes"
+    "pages/indexes/indexes",
+    "pages/drop/drop"
   ],
   "window": {
     "backgroundTextStyle": "light",

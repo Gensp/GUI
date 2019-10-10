@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "g-box": "/component/box/box",
-    "g-tabs": "/component/tabs/tabs"
-  }
-}

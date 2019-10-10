@@ -1,0 +1,17 @@
+/* pages/drop/drop.wxss */
+image{
+  width: 100%;
+  height: 100%;
+}
+.drop-bar{
+  position: relative;
+  padding:30rpx;
+  box-sizing: border-box;
+  background-color: #eee;
+  height: 100vw;
+}
+.drop-main{
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}

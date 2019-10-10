@@ -313,8 +313,8 @@ Component({
         
         wx.canvasToTempFilePath({
           fileType: 'jpg',
-          x: (canvasData.imgwh - dw) / 2 + 100, /*stv.offsetX * (stv.scale - canvasData.scale),*/
-          y: (canvasData.imgwh - dh) / 2 + 100,/*stv.offsetY * (stv.scale - canvasData.scale),*/
+          x: (canvasData.imgwh - dw) / 2, /*stv.offsetX * (stv.scale - canvasData.scale),*/
+          y: (canvasData.imgwh - dh) / 2,/*stv.offsetY * (stv.scale - canvasData.scale),*/
           width: dw,
           height: dh,
           destWidth: cw,

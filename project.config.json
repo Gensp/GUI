@@ -8,10 +8,21 @@
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"autoAudits": false,
+		"uglifyFileName": true,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"enhance": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.2.5",
+	"libVersion": "2.8.0",
 	"appid": "wxccd02aa3adde2f9b",
 	"projectname": "GUI",
 	"isGameTourist": false,
@@ -32,6 +43,10 @@
 		},
 		"game": {
 			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
 			"list": []
 		},
 		"miniprogram": {
@@ -157,6 +172,13 @@
 					"id": 19,
 					"name": "索引",
 					"pathName": "pages/indexes/indexes",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 20,
+					"name": "drop",
+					"pathName": "pages/drop/drop",
 					"query": "",
 					"scene": null
 				}

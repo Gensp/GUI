@@ -1,0 +1,10 @@
+<!--pages/drop/drop.wxml-->
+<view class="drop-bar">
+  <view class="drop-main" bindtap="inClear">
+    <g-drop wx:if="{{imgData.length}}" wx:for="{{imgData}}" wx:key="{{index}}" imgurl="{{item.url}}" key="{{item.key}}" boxW="{{boxJson.width}}" boxH="{{ boxJson.height}}" active="{{item.active}}" bindinit="initDrop" bindindel="inDelDrop" catchtap="inToggle" bindimgStart="inToggle" data-index="{{index}}"></g-drop>
+    <image src="./img.jpg" />
+  </view>
+</view>
+<view style="padding:30rpx;">
+  <g-button type="primary" bindtap="inSetImgData">插入挂件</g-button>
+</view>
