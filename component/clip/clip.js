@@ -21,6 +21,16 @@ Component({
     scuuessTxt: {
       type: String,
       value: '确定'
+    },
+
+    saveW:{
+      type: [String, Number],
+      value: 800
+    },
+
+    saveH:{
+      type: [String, Number],
+      value: 800
     }
   },
 
@@ -42,7 +52,7 @@ Component({
       imgw: '',
       imgh: '',
       scale: 1, //根据图片长、宽计算可缩放最小比例
-      multiple:1,//根据裁切区域长、宽计算可放大最大比例
+      multiple: 1,//根据裁切区域长、宽计算可放大最大比例
     },
     animateClass:''
   },
@@ -94,13 +104,12 @@ Component({
               'canvasData.multiple': res.width / clipBoxData.width
             })
           }
-
           
           me.setData({
             'canvasData.imgw': res.width,
             'canvasData.imgh': res.height,
             'canvasData.scale':dScale,
-            'stv.scale': 3//dScale//me.data.canvasData.multiple
+            'stv.scale': dScale
           });
 
           let { canvasData, stv } = me.data;
@@ -294,41 +303,39 @@ Component({
         title: '裁切中...',
         mask: true
       });
-      const { stv, clipBoxData, canvasData, imgurl } = me.data;
+      const { stv, clipBoxData, canvasData, imgurl, saveW, saveH } = me.data;
       const canvasid = 'g-clip-canvas', ctx = wx.createCanvasContext(canvasid, me);
     
-        //图片在canvas画布内X、Y轴初始偏移值
+      //图片在canvas画布内X、Y轴初始偏移值
       const xx = canvasData.isWH ? 0 : Math.abs((canvasData.imgw - canvasData.imgh) / 2) ,
         yy = canvasData.isWH ? Math.abs((canvasData.imgh - canvasData.imgw) / 2) : 0;
 
-      ctx.drawImage(imgurl, 0, 0, 
-        canvasData.imgw, canvasData.imgh,
-        xx, yy, canvasData.imgw, canvasData.imgh);
+      ctx.drawImage(imgurl, 0, 0, canvasData.imgw, canvasData.imgh, xx, yy, canvasData.imgw, canvasData.imgh);
 
       ctx.draw(false, () => {
         //image图片最大长、宽
         const cw = clipBoxData.width * canvasData.multiple, ch = clipBoxData.height * canvasData.multiple;
-        
+
+        //裁切区尺寸*缩放倍数
         const dw = clipBoxData.width * stv.scale, dh = clipBoxData.height * stv.scale;
-        
+
+        //画布中心点坐标
+        const rx = (canvasData.imgwh / 2), ry = (canvasData.imgwh / 2);
+
+        //裁切区在画布中的初始化值
+        const currentW = clipBoxData.width * (canvasData.imgwh / dw), currentH = clipBoxData.height * (canvasData.imgwh / dh);
         wx.canvasToTempFilePath({
           fileType: 'jpg',
-          x: (canvasData.imgwh - dw) / 2, /*stv.offsetX * (stv.scale - canvasData.scale),*/
-          y: (canvasData.imgwh - dh) / 2,/*stv.offsetY * (stv.scale - canvasData.scale),*/
-          width: dw,
-          height: dh,
-          destWidth: cw,
-          destHeight: ch,
+          //中心点 - (裁切区域初始值/2)- 位移 * (裁切区画布中的比例)
+          x: rx - (currentW / 2) - (stv.offsetX * (canvasData.imgwh / dw)),
+          y: ry - (currentH / 2) - (stv.offsetY * (canvasData.imgwh / dw)),
+          width: currentW,
+          height: currentH,
+          destWidth: saveW,
+          destHeight: saveH,
           canvasId: canvasid,
           success(res) {
-            wx.previewImage({
-              current: res.tempFilePath,
-              urls: [res.tempFilePath]
-            });
-            /*wx.saveImageToPhotosAlbum({
-              filePath: res.tempFilePath,
-            })*/
-            //me.triggerEvent('insuccess', { clipimg: res.tempFilePath });
+            me.triggerEvent('insuccess', { clipurl: res.tempFilePath });
           },
           complete(res){
             wx.hideLoading();

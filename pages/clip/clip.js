@@ -6,15 +6,16 @@ Page({
    */
   data: {
     clipData:{
-      state: true,
-      imgurl:'../../images/test2.jpg'
+      state: false,
+      imgurl:'',
+      clipurl:''
     }
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad (options) {
     
   },
 
@@ -23,6 +24,7 @@ Page({
     const me = this;
     wx.chooseImage({
       count: 1,
+      //sizeType: ['original'],
       success(res) {
         me.setData({
           'clipData.state': true,
@@ -35,14 +37,16 @@ Page({
   //取消裁切
   inToggleClip(e){
     const me = this;
-    console.log(e)
+    //console.log(e)
     me.setData({
       'clipData.state': !me.data.clipData.state
     })
 
     //确定
     if (e.type == "insuccess"){
-      console.log('确定')
+      me.setData({
+        'clipurl': e.detail.clipurl
+      })
     }
   },
 

@@ -6,11 +6,16 @@
 	"setting": {
 		"urlCheck": true,
 		"es6": true,
+		"enhance": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
+		"coverView": true,
+		"nodeModules": false,
 		"autoAudits": false,
-		"uglifyFileName": true,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"uglifyFileName": false,
 		"checkInvalidKey": true,
 		"checkSiteMap": true,
 		"uploadWithSourceMap": true,
@@ -18,11 +23,10 @@
 			"ignore": [],
 			"disablePlugins": [],
 			"outputPath": ""
-		},
-		"enhance": true
+		}
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.8.0",
+	"libVersion": "2.9.0",
 	"appid": "wxccd02aa3adde2f9b",
 	"projectname": "GUI",
 	"isGameTourist": false,
@@ -179,6 +183,13 @@
 					"id": 20,
 					"name": "drop",
 					"pathName": "pages/drop/drop",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/swiper/swiper",
+					"pathName": "pages/swiper/swiper",
 					"query": "",
 					"scene": null
 				}

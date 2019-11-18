@@ -1,0 +1,32 @@
+/* component/swiper/swiper.wxss */
+.swiper-bar{
+  position: relative;
+  height: 400rpx;
+  background-color: #666;
+  overflow: hidden;
+}
+.swiper-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /*transition: transform .3s;*/
+}
+.animate{
+  transition: transform .3s ease-in-out;
+}
+.swiper-item{
+  display: inline-block;
+  height: 100%;
+  padding: 0 8rpx;
+  box-sizing: border-box;
+  transform: scale(.88);
+  transition: transform .3s ease-in-out;
+}
+.item-main{
+  background:#fff;
+  height: 100%;
+  border-radius: 10rpx;
+}
+.swiper-item.active{
+  transform: scale(1);
+}

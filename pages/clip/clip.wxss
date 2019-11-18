@@ -2,3 +2,7 @@
 .wrap{
   padding:0 30rpx;
 }
+.clip-img{
+  width: 500rpx;
+  height: 500rpx;
+}

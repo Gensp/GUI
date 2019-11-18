@@ -21,7 +21,8 @@
     "pages/clip/clip",
     "pages/grid/grid",
     "pages/indexes/indexes",
-    "pages/drop/drop"
+    "pages/drop/drop",
+    "pages/swiper/swiper"
   ],
   "window": {
     "backgroundTextStyle": "light",
