@@ -1,4 +1,4 @@
 <!--pages/indexes/indexes.wxml-->
-<g-indexes>
+<g-indexes bindinmove="inMove">
   <view wx:for="{{50}}" wx:key="{{index}}">{{index}}</view>
 </g-indexes>

@@ -1,5 +1,2 @@
 <!--pages/swiper/swiper.wxml-->
-<g-swiper />
-<editor placeholder="留言">
-  dd
-</editor>
+<g-swiper slide="{{slide}}" list="{{list}}" />

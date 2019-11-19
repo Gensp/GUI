@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "g-fixed": "/component/fixed/fixed"
+  }
+}

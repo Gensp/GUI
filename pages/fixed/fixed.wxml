@@ -1,0 +1,8 @@
+<!--pages/fixed/fixed.wxml-->
+<view wx:for="{{5}}">{{index}}</view>
+<view class="fixed-wrap">
+  <g-fixed scrollTop="{{scrollTop}}">
+    <view class="fixed-box">吸顶容器</view>
+  </g-fixed>
+</view>
+<view wx:for="{{60}}">{{index}}</view>

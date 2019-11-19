@@ -26,7 +26,7 @@
 		}
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.9.0",
+	"libVersion": "2.9.3",
 	"appid": "wxccd02aa3adde2f9b",
 	"projectname": "GUI",
 	"isGameTourist": false,
@@ -187,9 +187,16 @@
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "pages/swiper/swiper",
+					"id": 21,
+					"name": "swiper",
 					"pathName": "pages/swiper/swiper",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "吸顶",
+					"pathName": "pages/fixed/fixed",
 					"query": "",
 					"scene": null
 				}

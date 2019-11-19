@@ -1,11 +1,11 @@
-// pages/indexes/indexes.js
+// pages/fixed/fixed.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    scrollTop: 0
   },
 
   /**
@@ -15,8 +15,11 @@ Page({
 
   },
 
-  inMove(e){
-    console.log(e.detail)
+  //页面滚动
+  onPageScroll(event) {
+    this.setData({
+      scrollTop: event.scrollTop
+    })
   },
 
   /**

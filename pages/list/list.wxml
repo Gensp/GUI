@@ -28,11 +28,11 @@
 </g-box>
 
 <g-box mode="border" title="头像">
-  <g-list avatar="https://p3.pstatp.com/thumb/7be8000268c22a5e9d23.jpeg" link>Gensp</g-list>
+  <g-list avatar="../../images/gui.png" link>Gensp</g-list>
 </g-box>
 
 <g-box mode="border" title="圆角" mode="empty">
   <g-list mode="radius">我是内容</g-list>
   <g-list title="我是标题" mode="radius">我是内容</g-list>
-  <g-list avatar="https://p3.pstatp.com/thumb/7be8000268c22a5e9d23.jpeg" mode="radius">Gensp</g-list>
+  <g-list avatar="../../images/gui.png" mode="radius">Gensp</g-list>
 </g-box>

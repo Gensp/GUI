@@ -39,15 +39,17 @@ Page({
           { val: 'Loading 加载', path: '/pages/loading/loading' },
           { val: 'Modal 对话框', path: '/pages/modal/modal' },
           //{ val: 'Toast 提示', path: '/pages/Toast/Toast' },
-          //{ val: 'Swiper 侧滑', path: '/pages/swiper/swiper' }
         ]
       },
       {
         title: '视图',
         list: [
           { val: 'Clip 裁切', path: '/pages/clip/clip' },
+          { val: 'Fixed 吸顶', path: '/pages/fixed/fixed' },
           { val: 'Tab 选项卡', path: '/pages/tab/tab' },
+          { val: 'Swiper 滑块', path: '/pages/swiper/swiper' },
           { val: 'Drawer 抽屉', path: '/pages/drawer/drawer' },
+          { val: 'Drop 拖动', path: '/pages/drop/drop' },
           { val: 'Gesture 手势', path: '/pages/gesture/gesture' },
           { val: 'Indexes 索引', path: '/pages/indexes/indexes' },
           //{ val: 'Tag 标签', path: '/pages/tag/tag' },

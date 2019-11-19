@@ -18,10 +18,8 @@ Page({
       me.setData({
         'boxJson':res
       })
-      console.log(me.data.boxJson)
-      setTimeout(function () {
-        me.inSetImgData();
-      }, 500)
+      //console.log(me.data.boxJson)
+      me.inSetImgData();
     })
   },
 
@@ -41,7 +39,7 @@ Page({
     me.inClear();
 
     let { imgData } = me.data;
-    imgData.push({ url: '../../pages/drop/ico.png', key: ++IncreaseID, active: true });
+    imgData.push({ url: '../../images/gui.png', key: ++IncreaseID, active: true });
     me.setData({
       'imgData': imgData
     })

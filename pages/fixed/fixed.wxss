@@ -1,0 +1,10 @@
+/* pages/fixed/fixed.wxss */
+.fixed-wrap{
+  min-height: 88rpx;
+}
+.fixed-box{
+  height: 88rpx;
+  line-height: 88rpx;
+  padding:0 30rpx;
+  background-color: #fff;
+}

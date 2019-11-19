@@ -11,6 +11,11 @@ Component({
       value: ''
     },
 
+    dataJson:{
+      type: Object,
+      value: {}
+    },
+
     key:{
       type: String,
       value: ''
@@ -55,36 +60,42 @@ Component({
     initImg(){
       const me = this;
       let { imgurl, boxW, boxH } = me.data;
+      if (me.data.dataJson.rotate){
+        me.setData({
+          'data': me.data.dataJson
+        })
+        me.triggerEvent('init', me.data.dataJson);
+      }
+      else{
+        //获取图片信息
+        wx.getImageInfo({
+          src: imgurl,
+          success(res) {
+            let data = {
+              active: me.data.active,
+              key: me.data.key,
+              imgurl: imgurl,
+              width: res.width,
+              height: res.height,
+              //定位居中
+              left: boxW / 2 - res.width / 2,
+              top: boxH / 2 - res.height / 2,
+              scale: 1, //缩放
+              oScale: 1, //缩放方向
+              rotate: 1, //角度
+            }
 
-      //获取图片信息
-      wx.getImageInfo({
-        src: imgurl,
-        success(res) {
-          let data = {
-            active: me.data.active,
-            key: me.data.key,
-            imgurl: imgurl,
-            width: res.width,
-            height: res.height,
-            //定位居中
-            left: boxW / 2 - res.width / 2,
-            top: boxH / 2 - res.height / 2,
-            scale: 1, //缩放
-            oScale: 1, //缩放方向
-            rotate: 1, //角度
+            //中心点
+            data.cx = data.left + data.width / 2,
+              data.cy = data.top + data.height / 2;
+
+            me.setData({
+              'data': data
+            })
+            me.triggerEvent('init', data);
           }
-
-          //中心点
-          data.cx = data.left + data.width / 2,
-          data.cy = data.top + data.height / 2;
-
-          me.setData({
-            'data': data
-          })
-          console.log(data)
-          me.triggerEvent('init', data);
-        }
-      })
+        })
+      }
 
     },
 
@@ -153,8 +164,9 @@ Component({
       //记录移动后的位置
       data._tx = e.touches[0].clientX;
       data._ty = e.touches[0].clientY;
+
       //移动的点到圆心的距离
-      data.moveDistance = me.inGetRadius(data.cx, data.cy, data._tx, data._ty - 10);
+      data.moveDistance = me.inGetRadius(data.cx, data.cy, data._tx, data._ty+10);
 
       data.scale = data.moveDistance / data.radius;
       data.oScale = 1 / data.scale;

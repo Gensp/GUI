@@ -2,3 +2,41 @@
 .scroll-view{
   height: 100%;
 }
+.indexes-bar{
+  position: fixed;
+  z-index: 2;
+  top: 50%;
+  right: 10rpx;
+  transform: translate(0, -50%);
+}
+.item-indexes{
+  width: 18px;
+  height: 18px;
+  color: #666;
+  line-height: 18px;
+  font-size: 24rpx;
+  text-align: center;
+}
+.indexes-active{
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 140rpx;
+  height: 140rpx;
+  line-height: 140rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 60rpx;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0,0,0, .5);
+}
+.item-title{
+  height: 80rpx;
+  line-height: 80rpx;
+  padding:0 30rpx;
+}
+.item-list{
+  line-height: 88rpx;
+  background-color: #fff;
+}

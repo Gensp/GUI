@@ -10,7 +10,7 @@ Component({
     //需裁切图片路径
     imgurl:{
       type: String,
-      value: 'ktest.jpg'
+      value: ''
     },
 
     cancelTxt:{

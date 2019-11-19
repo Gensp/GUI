@@ -1,12 +1,34 @@
 /* component/swiper/swiper.wxss */
+image{
+  width: 100%;
+  height: 100%;
+}
 .swiper-bar{
   position: relative;
-  height: 400rpx;
-  background-color: #666;
+  height: 360rpx;
   overflow: hidden;
+}
+.poster-bg,
+.swiper-bar::after{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.poster-bg{
+  filter: blur(20rpx);
+  background-size: cover;
+  background-position: center;
+  transition: background .3s ease-in-out;
+}
+.swiper-bar::after{
+  content: '';
+  background-color: rgba(0,0,0, .6);
 }
 .swiper-box{
   position: absolute;
+  z-index: 2;
   top: 50%;
   left: 50%;
   /*transition: transform .3s;*/
@@ -17,14 +39,14 @@
 .swiper-item{
   display: inline-block;
   height: 100%;
-  padding: 0 8rpx;
   box-sizing: border-box;
-  transform: scale(.88);
+  transform: scale(.76);
   transition: transform .3s ease-in-out;
 }
 .item-main{
-  background:#fff;
   height: 100%;
+}
+.item-main image{
   border-radius: 10rpx;
 }
 .swiper-item.active{

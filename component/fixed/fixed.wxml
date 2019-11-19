@@ -1,0 +1,4 @@
+<!--component/fixed/fixed.wxml-->
+<view class="g-class {{toggleClass}}" id="fixed-bar">
+  <slot></slot>
+</view>
