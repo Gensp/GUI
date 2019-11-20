@@ -1,1 +1,13 @@
 /* pages/indexes/indexes.wxss */
+.item-list{
+  position: relative;
+}
+.item-list::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  display: block;
+  transform: scaleY(0.5);
+}

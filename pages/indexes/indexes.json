@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "g-indexes": "/component/indexes/indexes"
+    "g-indexes": "/component/indexes/indexes",
+    "g-indexes-item": "/component/indexes-item/indexes-item"
   }
 }

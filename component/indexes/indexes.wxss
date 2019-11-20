@@ -1,15 +1,15 @@
 /* component/indexes/indexes.wxss */
 .scroll-view{
-  height: 100%;
+  height: 100vh;
 }
-.indexes-bar{
+.g-indexes-bar{
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   top: 50%;
   right: 10rpx;
   transform: translate(0, -50%);
 }
-.item-indexes{
+.g-item-indexes{
   width: 18px;
   height: 18px;
   color: #666;
@@ -17,8 +17,9 @@
   font-size: 24rpx;
   text-align: center;
 }
-.indexes-active{
+.g-indexes-active{
   position: fixed;
+  z-index: 2;
   left: 50%;
   top: 50%;
   width: 140rpx;
@@ -30,13 +31,4 @@
   border-radius: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(0,0,0, .5);
-}
-.item-title{
-  height: 80rpx;
-  line-height: 80rpx;
-  padding:0 30rpx;
-}
-.item-list{
-  line-height: 88rpx;
-  background-color: #fff;
 }

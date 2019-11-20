@@ -1,0 +1,7 @@
+<!--component/indexes-item/indexes-item.wxml-->
+<view class="g-class g-indexes-item">
+  <view class="g-indexes-item-title">{{name}}</view>
+  <view class="g-indexes-item-box">
+    <slot></slot>
+  </view>
+</view>

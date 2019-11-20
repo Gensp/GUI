@@ -1,14 +1,8 @@
 <!--component/indexes/indexes.wxml-->
-<scroll-view class='g-class scroll-view' scroll-into-view="{{indexesActive.value}}" scroll-y>
-  <view class="indexes-active" hidden="{{!indexesActive.state}}">{{indexesActive.value}}</view>
-  <view class="indexes-bar" catchtouchmove="inTouchMove" catchtouchend="inTouchEnd">
-    <view class="item-indexes" wx:for="{{indexesData}}" data-index="{{index}}">{{item}}</view>
+<scroll-view class='g-class scroll-view' scroll-top="{{scrollTop}}" scroll-y>
+  <view class="g-indexes-active" hidden="{{!indexesActive.state}}">{{indexesActive.value}}</view>
+  <view class="g-indexes-bar" catchtouchmove="inTouchMove" catchtouchend="inTouchEnd">
+    <view class="g-item-indexes" wx:for="{{indexesData}}" data-index="{{index}}">{{item}}</view>
   </view>
-  <block wx:for="{{indexesData}}">
-    <view id="{{item}}" class="item-title">{{item}}</view>
-    <view class="item-list">
-      <view wx:for="{{10}}">{{index}}</view>
-    </view>
-  </block>
-  <!-- <slot></slot> -->
+  <slot></slot>
 </scroll-view>

@@ -1,0 +1,11 @@
+/* component/indexes-item/indexes-item.wxss */
+.g-indexes-item-title{
+  height: 80rpx;
+  line-height: 80rpx;
+  padding:0 30rpx;
+}
+.g-indexes-item-box{
+  line-height: 88rpx;
+  padding:0 30rpx;
+  background-color: #fff;
+}

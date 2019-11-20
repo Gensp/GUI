@@ -1,4 +1,6 @@
 <!--pages/indexes/indexes.wxml-->
-<g-indexes bindinmove="inMove">
-  <view wx:for="{{50}}" wx:key="{{index}}">{{index}}</view>
+<g-indexes bindinmove="inMove" wx:if="{{sourceData}}">
+  <g-indexes-item  wx:for="{{sourceData}}" name="{{it.key}}" wx:for-index="idx" wx:for-item="it">
+    <view class="item-list" wx:for="{{it.list}}" wx:for-index="jdx" wx:for-item="jt">{{jt.name}}</view>
+  </g-indexes-item>
 </g-indexes>
