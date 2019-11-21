@@ -5,7 +5,25 @@ Page({
    * 页面的初始数据
    */
   data: {
-    github:'https://github.com/Gensp/GUI'
+    github:'https://github.com/Gensp/GUI',
+    logData:[
+      {
+        title: 'v1.0.3(2019-11-21)',
+        list: ['- 新增Upload（图片上传）组件']
+      },
+      {
+        title: 'v1.0.2(2019-11-20)',
+        list: ['- 新增Grid、Clip、Fixed、Swiper、Drop、Indexes组件']
+      },
+      {
+        title: 'v1.0.1(2018-12-20)',
+        list: ['- 新增Gesture、Region组件']
+      },
+      {
+        title:'v1.0.0(2018-09-27)',
+        list: ['- 初始版本']
+      }
+    ]
   },
 
   /**

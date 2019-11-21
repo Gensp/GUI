@@ -23,7 +23,8 @@
     "pages/indexes/indexes",
     "pages/drop/drop",
     "pages/swiper/swiper",
-    "pages/fixed/fixed"
+    "pages/fixed/fixed",
+    "pages/upload/upload"
   ],
   "window": {
     "backgroundTextStyle": "light",

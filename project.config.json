@@ -199,6 +199,13 @@
 					"pathName": "pages/fixed/fixed",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "upload",
+					"pathName": "pages/upload/upload",
+					"query": "",
+					"scene": null
 				}
 			]
 		}

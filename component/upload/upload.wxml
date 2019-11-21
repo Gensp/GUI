@@ -1,0 +1,11 @@
+<!--component/upload/upload.wxml-->
+<view class="upload-bar">
+  <view class="upload-item {{item.upload?'upload-state':''}}" wx:for="{{list}}" wx:key="{{index}}">
+    <image class="opacity" src="{{item.src}}" mode="aspectFill" bindtap="inSeeImg" data-index="{{index}}" />
+    <view class="close-ico" wx:if="{{isdel}}" bindtap="inDelImg" data-index="{{index}}"></view>
+  </view>
+  <view class="upload-item upload-add opacity" bindtap="inUploadImg" hidden="{{list.length >= maxImg}}">
+    <view class="add-ico"></view>
+    <view>上传图片</view>
+  </view>
+</view>

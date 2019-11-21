@@ -93,7 +93,7 @@ Component({
           if (res.width > res.height) {
             dScale = dHeight / (dWidth / res.width * res.height);
             me.setData({
-              'canvasData.isWH':true,
+              'canvasData.isWH': true,
               'canvasData.multiple': res.height / clipBoxData.height
             })
           }

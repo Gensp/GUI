@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "g-box": "/component/box/box",
+    "g-list": "/component/list/list",
+    "g-upload": "/component/upload/upload"
+  }
+}

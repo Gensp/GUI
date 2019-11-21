@@ -30,7 +30,8 @@ Page({
           { val: 'Textarea 留言框', path: '/pages/textarea/textarea' },
           { val: 'Radio 单选', path: '/pages/radio/radio' },
           { val: 'Checkbox 复选', path: '/pages/checkbox/checkbox' },
-          { val: 'Switch 开关', path: '/pages/switch/switch' }
+          { val: 'Switch 开关', path: '/pages/switch/switch' },
+          { val: 'Upload 图片上传', path: '/pages/upload/upload' }
         ]
       },
       {

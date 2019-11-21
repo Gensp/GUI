@@ -1,0 +1,12 @@
+<!--pages/upload/upload.wxml-->
+<g-box mode="border" title="普通上传{{uploadImgData.length}}/9">
+  <g-list>
+    <g-upload bindindel="inDelImg" bindinupload="inUploadImg" />
+  </g-list>
+</g-box>
+
+<g-box mode="border" title="反显上传({{uploadImgData1.length}}/3)">
+  <g-list>
+    <g-upload maxImg="3" list="{{uploadImgData1}}" bindindel="inDelImg1" bindinupload="inUploadImg1" />
+  </g-list>
+</g-box>

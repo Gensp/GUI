@@ -1,0 +1,103 @@
+/* component/upload/upload.wxss */
+image{
+  width: 100%;
+  height: 100%;
+}
+.upload-bar{
+  display: flex;
+  flex-wrap: wrap;
+  margin: -30rpx 0 0 -30rpx;
+}
+.upload-item{
+  position: relative;
+  width: 150rpx;
+  height: 150rpx;
+  margin: 30rpx 0 0 30rpx;
+  text-align: center;
+  display:box; 
+  display:-webkit-box;
+  -webkit-box-pack:center; 
+  box-pack:center;
+  -webkit-box-orient:vertical; 
+  box-orient:vertical;
+  font-size: 24rpx;
+  color: rgba(56,57,59, .78);
+}
+.opacity:active{
+  opacity: .7;
+}
+.add-ico{
+  position: relative;
+  width: 100%;
+  height: 44rpx;
+  margin: 10rpx 0;
+}
+.close-ico::before,
+.close-ico::after,
+.add-ico::before,
+.add-ico::after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left:50%;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 6rpx;
+  background-color: #d4d6d9;
+  transform: translate(-50%, -50%);
+}
+.add-ico::before{
+  width: 44rpx;
+  height: 6rpx;
+}
+.add-ico::after{
+  width: 6rpx;
+  height: 44rpx;
+}
+.close-ico{
+  position: absolute;
+  right: -20rpx;
+  top: -20rpx;
+  z-index: 2;
+  width:  32rpx;
+  height: 32rpx;
+  border: 8rpx solid #fff;
+  background-color: #ff2f47;
+  border-radius: 50%;
+}
+.close-ico:active{
+  background-color: #fd8f9c;
+}
+.close-ico::before,
+.close-ico::after{
+  width: 16rpx;
+  height: 4rpx;
+  margin: -2rpx 0 0 -8rpx;
+  background-color: #fff;
+}
+.close-ico::before{
+  transform: rotate(45deg);
+}
+.close-ico::after{
+  transform: rotate(-45deg);
+}
+.upload-add{
+  background-color: #edeff1;
+}
+.upload-state::after{
+  content: '上传中...';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display:box; 
+  display:-webkit-box;
+  -webkit-box-pack:center; 
+  box-pack:center;
+  -webkit-box-orient:vertical; 
+  box-orient:vertical;
+  color: rgba(255,255,255, .9);
+  background: rgba(0,0,0, .5);
+}
