@@ -65,22 +65,22 @@ image{
   border: 8rpx solid #fff;
   background-color: #ff2f47;
   border-radius: 50%;
+  transform: rotate(45deg);
 }
 .close-ico:active{
   background-color: #fd8f9c;
 }
 .close-ico::before,
 .close-ico::after{
-  width: 16rpx;
-  height: 4rpx;
-  margin: -2rpx 0 0 -8rpx;
   background-color: #fff;
 }
 .close-ico::before{
-  transform: rotate(45deg);
+  width: 16rpx;
+  height: 4rpx;
 }
 .close-ico::after{
-  transform: rotate(-45deg);
+  height: 16rpx;
+  width: 4rpx;
 }
 .upload-add{
   background-color: #edeff1;
