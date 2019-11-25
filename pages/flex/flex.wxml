@@ -35,3 +35,10 @@
   <g-col g-class="demo-col" offset="2" span="4">offset-2 span-4</g-col>
   <g-col g-class="demo-col" offset="2" span="4">offset-2 span-4</g-col>
 </g-flex>
+
+<g-box title="间隔布局"></g-box>
+<g-flex g-class="demo-space" space="30">
+  <g-col span="4" wx:for="{{6}}">
+    <view class="demo-col">span-4</view>
+  </g-col>
+</g-flex>

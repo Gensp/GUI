@@ -13,3 +13,7 @@
 .demo-col.light{
   background-color: rgba(44,169,225, .5);
 }
+.demo-space{
+  text-align: center;
+  margin-bottom: 20rpx;
+}

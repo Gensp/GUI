@@ -1,4 +1,4 @@
 <!--component/col/col.wxml-->
-<view class='g-class g-col g-col-{{span}} {{offset?("g-offset-"+offset):""}} {{gridmode?("g-grid-"+gridmode):""}}'>
+<view class='g-class g-col g-col-{{span}} {{offset?("g-offset-"+offset):""}} {{gridmode?("g-grid-"+gridmode):""}}' style="{{space>0?'padding-left:'+space+'rpx;padding-top:'+space+'rpx;':''}}">
   <slot></slot>
 </view>

@@ -1,2 +1,2 @@
 <!--component/flex/flex.wxml-->
-<view class='g-class g-flex'><slot></slot></view>
+<view class='g-class g-flex' style="{{space>0?'margin-top:-'+space+'rpx; margin-left:-'+space+'rpx;':''}}"><slot></slot></view>

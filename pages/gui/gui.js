@@ -8,6 +8,10 @@ Page({
     github:'https://github.com/Gensp/GUI',
     logData:[
       {
+        title: 'v1.0.3(2019-11-25)',
+        list: ['- Flex布局，新增配置选项 space(间隔)']
+      },
+      {
         title: 'v1.0.3(2019-11-21)',
         list: ['- 新增Upload（图片上传）组件']
       },
