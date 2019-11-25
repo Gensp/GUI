@@ -1,0 +1,11 @@
+<!--component/top/top.wxml-->
+<view class="g-class g-top-bar" style="padding-top:{{system.statusBarHeight}}px;background-color:{{background}};color:{{color}};">
+  <view class="g-top-title {{align}}">
+
+    <!-- 返回上一页 -->
+    <view wx:if="{{isback}}" class="g-arrow left opacity" bindtap="inGoBack"></view>
+
+    <view class="g-text">{{title}}</view>
+  </view>
+  <slot></slot>
+</view>

@@ -1,0 +1,12 @@
+<!--component/page/page.wxml-->
+<view class="g-class page {{isIPX}}">
+  <view class="top-class top-bar" wx:if="{{top}}">
+    <slot name="top"></slot>
+  </view>
+  <view class="content {{autoX?'auto':''}}">
+    <slot name="con"></slot>
+  </view>
+  <view class="bom-class bom-bar {{autoX?'auto':''}}" wx:if="{{bom}}">
+    <slot name="bom"></slot>
+  </view>
+</view>

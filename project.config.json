@@ -206,6 +206,27 @@
 					"pathName": "pages/upload/upload",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": 24,
+					"name": "自定也头部",
+					"pathName": "pages/top/top",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "page",
+					"pathName": "pages/page/page",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "search",
+					"pathName": "pages/search/search",
+					"query": "",
+					"scene": null
 				}
 			]
 		}

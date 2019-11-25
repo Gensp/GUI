@@ -1,0 +1,2 @@
+<!--pages/top/top.wxml-->
+<g-top title="自定义头部" align="left" />

@@ -24,7 +24,10 @@
     "pages/drop/drop",
     "pages/swiper/swiper",
     "pages/fixed/fixed",
-    "pages/upload/upload"
+    "pages/upload/upload",
+    "pages/top/top",
+    "pages/page/page",
+    "pages/search/search"
   ],
   "window": {
     "backgroundTextStyle": "light",

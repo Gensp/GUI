@@ -1,0 +1,24 @@
+/* component/page/page.wxss */
+.page{
+  height: 100vh;
+  display: flex;
+  flex-flow: row;
+  flex-direction: column;
+}
+.content{
+  position: relative;
+  flex: 1;
+  z-index: 3;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.bom-bar{
+  position: relative;
+  z-index: 3;
+  background-color: #fff;
+  box-shadow: 0 -18rpx 48rpx rgba(224,227,238, .8);
+}
+.page.isIPX .content.auto:last-child,
+.page.isIPX .content + .bom-bar.auto{
+  padding-bottom: 34px;
+}

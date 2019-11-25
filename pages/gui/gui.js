@@ -8,8 +8,11 @@ Page({
     github:'https://github.com/Gensp/GUI',
     logData:[
       {
-        title: 'v1.0.3(2019-11-25)',
-        list: ['- Flex布局，新增配置选项 space(间隔)']
+        title: 'v1.0.4(2019-11-25)',
+        list: [
+          '- 新增Page、Top、Search组件', 
+          '- Flex布局，新增配置选项 space(间隔)',
+        ]
       },
       {
         title: 'v1.0.3(2019-11-21)',

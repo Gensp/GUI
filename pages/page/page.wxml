@@ -1,0 +1,12 @@
+<!--pages/page/page.wxml-->
+<g-page top bom bom-class="custom-bom">
+  <view slot="top">
+    <g-top title="自定义头部" />
+  </view>
+  <scroll-view slot="con" scroll-y>
+    <view wx:for="{{50}}">{{index}}</view>
+  </scroll-view>
+  <view slot="bom">
+    <g-button type="primary">页脚</g-button>
+  </view>
+</g-page>

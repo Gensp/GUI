@@ -16,6 +16,9 @@ Page({
       {
         title: '布局',
         list: [
+          { val: 'Page 框架', path: '/pages/page/page' },
+          { val: 'Top 头部', path: '/pages/top/top' },
+          { val: 'Search 搜索', path: '/pages/search/search' },
           { val: 'Flex 栅格', path: '/pages/flex/flex' },
           { val: 'Grid 宫格', path: '/pages/grid/grid' },
           { val: 'List 列表', path: '/pages/list/list' },

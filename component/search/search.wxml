@@ -1,0 +1,6 @@
+<!--component/search/search.wxml-->
+<view class="g-class search-bar">
+  <text class="search-icon"></text>
+  <input class="input-txt" value="{{keyword}}" type="text" placeholder="{{placeholder}}" bindinput="inChange" confirm-type="search" bindconfirm="inSubmit" />
+  <text class="g-cancel opacity" hidden="{{!keyword}}" bindtap="inClear">取 消</text>
+</view>

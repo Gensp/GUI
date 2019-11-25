@@ -1,0 +1,9 @@
+{
+  "navigationStyle": "custom",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "g-page": "/component/page/page",
+    "g-top": "/component/top/top",
+    "g-button": "/component/button/button"
+  }
+}

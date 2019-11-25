@@ -1,0 +1,2 @@
+<!--pages/search/search.wxml-->
+<g-search keyword="{{keyword}}" bindinchange="inChange" bindinsubmit="inSubmit" bindinclear="inClear" />

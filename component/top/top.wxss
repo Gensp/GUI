@@ -1,0 +1,51 @@
+/* component/top/top.wxss */
+.g-top-bar{
+  position: relative;
+  z-index: 51;
+  color: #fff;
+  background-color: #FE586C;
+}
+.g-top-title{
+  position: relative;
+  z-index: 2;
+  display: flex;
+  line-height: 88rpx;
+  padding-right: 200rpx;
+}
+.g-top-title.center{
+  text-align: center;
+  padding-left:200rpx;
+}
+.g-top-title.left{
+  text-align: left;
+  padding-left: 88rpx;
+}
+.g-text{
+  flex: 1;
+  font-size: 36rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.g-arrow{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 88rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+}
+.g-arrow::before{
+  content: '';
+  display: inline-block;
+  width: 18rpx;
+  height: 18rpx;
+  border-top: 4rpx solid #fff;
+  border-left: 4rpx solid #fff;
+  transform: rotate(-45deg);
+}
+.opacity:active{
+  opacity: .7;
+}

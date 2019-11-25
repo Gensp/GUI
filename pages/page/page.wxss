@@ -1,0 +1,8 @@
+/* pages/page/page.wxss */
+scroll-view{
+  height: 100%;
+}
+.custom-bom{
+  padding:30rpx;
+  text-align: center
+}
