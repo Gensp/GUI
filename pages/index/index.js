@@ -22,7 +22,6 @@ Page({
           { val: 'Flex 栅格', path: '/pages/flex/flex' },
           { val: 'Grid 宫格', path: '/pages/grid/grid' },
           { val: 'List 列表', path: '/pages/list/list' },
-          //{ val: 'Grid 宫格', path: '/pages/grid/grid' }
         ]
       },
       {

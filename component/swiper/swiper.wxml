@@ -2,7 +2,7 @@
 <view class="swiper-bar" bindtouchstart="inTouchStart" bindtouchmove="inTouchMove" bindtouchend="inTouchEnd">
   <view class="poster-bg" style="background-image:url({{list[slide].poster}})"></view>
   <view class="swiper-box {{animate?'animate':''}}" style="width:{{list.length * width}}px; height:{{height}}px; margin-top:-{{height/2}}px; transform:translate3D({{translateX}}px, 0, 0); ">
-    <view class="swiper-item {{slide == index?'active':''}}" style="width:{{width}}px;" wx:for="{{list}}" wx:key="{{index}}">
+    <view class="swiper-item {{slide == index?'active':''}}" style="width:{{width}}px;" wx:for="{{list}}" wx:key="index">
       <view class="item-main" catchtap="inSetSlide" data-index="{{index}}">
         <image src="{{item.poster}}" mode="aspectFill" />
       </view>

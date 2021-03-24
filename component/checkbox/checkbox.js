@@ -23,6 +23,11 @@ Component({
       value: 0
     },
 
+    key:{
+      type: [Number, String],
+      value: ''
+    },
+
     value: {
       type: String,
       value: ''
@@ -64,9 +69,17 @@ Component({
     inChange(e) {
       const me = this;
       if (me.data.disabled) return;
-      const item = { active: !me.data.checked, value: me.data.value, index: me.data.index };
+      const { key } = me.data;
       const parent = me.getRelationNodes('../checkbox-group/checkbox-group')[0];
-      parent ? parent.emitEvent(item) : me.triggerEvent('inchange', item);
+      let { active } = parent.data;
+      const key_idx = active.indexOf(key);
+      if(key_idx == -1){
+        active.push(key);
+      }
+      else{
+        active.splice(key_idx,1);
+      }
+      parent ? parent.emitEvent({active}) : me.triggerEvent('inchange', {active});
     }
   }
 })

@@ -33,6 +33,17 @@ Component({
     isIPX: wx.getSystemInfoSync().model.indexOf('iPhone X') == -1 ? '' : 'isIPX',
   },
 
+  ready(){
+    const SysModel = wx.getSystemInfoSync().model;
+    if(SysModel.includes('iPhone')){
+      if(SysModel.match(/\s../) > 10){
+        this.setData({
+          'isIPX': 'isIPX'
+        })
+      }
+    }
+  },
+
   /**
    * 组件的方法列表
    */

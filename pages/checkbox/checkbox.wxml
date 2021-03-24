@@ -1,7 +1,7 @@
 <!--pages/checkbox/checkbox.wxml-->
 <g-box mode="border" title="基础布局" g-class="demo-box">
   <g-checkbox-group active="{{checkboxActive}}" bindinchange="inChange1">
-    <g-checkbox wx:for="{{checkboxData}}" wx:key="{{index}}" value="{{item.value}}" align="{{item.align}}"></g-checkbox>
+    <g-checkbox wx:for="{{checkboxData}}" wx:key="index" value="{{item.value}}" align="{{item.align}}"></g-checkbox>
   </g-checkbox-group>
 </g-box>
 <g-checkbox-group active="{{radioActive}}" bindinchange="inChange2">

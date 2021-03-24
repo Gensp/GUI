@@ -60,15 +60,21 @@ Component({
     inSetFixedClass(){
       const { scrollTop, fixedData } = this.data;
       if (!fixedData) return;
-      if (scrollTop >= fixedData.top){
-        this.setData({
-          'toggleClass': 'fixed'
-        })
-      }
-      else{
-        this.setData({
-          'toggleClass': ''
-        })
+      if (!this.timeOut){
+        //避免频繁setData造成卡顿，控制50ms执行一次
+        this.timeOut = setTimeout(()=>{
+          if (scrollTop >= fixedData.top){
+            this.setData({
+              'toggleClass': 'fixed'
+            })
+          }
+          else{
+            this.setData({
+              'toggleClass': ''
+            })
+          }
+          this.timeOut = undefined;
+        },50)
       }
     },
   }

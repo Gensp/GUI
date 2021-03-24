@@ -59,6 +59,17 @@ Component({
 
   ready(){
     const me = this;
+    const sys = wx.getSystemInfoSync();
+
+    //根据保存图片w、h初始化截图盒子
+    const { saveW, saveH } = me.data;
+    const cw = sys.windowWidth - 30,
+    ch = (cw/saveW) * saveH;
+    me.setData({
+      'clipBoxStyle.width': cw,
+      'clipBoxStyle.height': ch,
+    });
+
     me.inGetQuery('#g-clip-box', (res)=>{
       me.setData({
         'clipBoxData': res
@@ -85,37 +96,45 @@ Component({
     //根据容器高度 计算图片缩放最小比例
     inCalcImgWH() {
       const me = this;
-      let { imgurl, clipBoxData } = me.data;
+      let { imgurl, clipBoxData, saveW, saveH } = me.data;
       wx.getImageInfo({
         src: imgurl,
         success(res) {
           let dHeight = clipBoxData.height, dWidth = clipBoxData.width, dScale;
-          if (res.width > res.height) {
-            dScale = dHeight / (dWidth / res.width * res.height);
-            me.setData({
-              'canvasData.isWH': true,
-              'canvasData.multiple': res.height / clipBoxData.height
-            })
+          if(saveW == saveH){
+            if (res.width > res.height) {
+              dScale = dHeight / (dWidth / res.width * res.height);
+              me.setData({
+                'canvasData.isWH': true,
+                'canvasData.multiple': res.height / clipBoxData.height
+              })
+            }
+            else {
+              dScale = dWidth / (dHeight / res.height * res.width);
+              me.setData({
+                'canvasData.isWH': false,
+                'canvasData.multiple': res.width / clipBoxData.width
+              })
+            }
           }
-          else {
+          else if(saveW > saveH){
             dScale = dWidth / (dHeight / res.height * res.width);
             me.setData({
               'canvasData.isWH': false,
-              'canvasData.multiple': res.width / clipBoxData.width
+              'canvasData.multiple': res.height / clipBoxData.height
             })
           }
-          
           me.setData({
             'canvasData.imgw': res.width,
             'canvasData.imgh': res.height,
-            'canvasData.scale':dScale,
+            'canvasData.scale': dScale,
             'stv.scale': dScale
           });
 
-          let { canvasData, stv } = me.data;
+          let { canvasData } = me.data;
           me.setData({
             //根据宽、高(数值大的一方)计算当前图片缩放后的宽、高
-            'canvasData.imgwh': canvasData.isWH ? canvasData.imgw : canvasData.imgh
+            'canvasData.imgwh': canvasData.imgw > canvasData.imgh ? canvasData.imgw : canvasData.imgh
           });
 
           me.inCalcMaxXY();
@@ -127,7 +146,7 @@ Component({
     inCalcMaxXY() {
       const me = this;
       let { stv, canvasData, clipBoxData } = me.data;
-      if (canvasData.imgw > canvasData.imgh) {
+      if (canvasData.isWH) {
         //根据高（宽>高）计算图片等比缩放比例
         const thanScale = canvasData.imgw / clipBoxData.width,
 
@@ -239,7 +258,7 @@ Component({
         me.inCalcMaxXY();
 
         //Y轴最大移动距离
-        let { stv, canvasData } = me.data;
+        let { stv } = me.data;
 
         //向下拖动
         if (stv.offsetY > 0) {
@@ -305,39 +324,42 @@ Component({
       });
       const { stv, clipBoxData, canvasData, imgurl, saveW, saveH } = me.data;
       const canvasid = 'g-clip-canvas', ctx = wx.createCanvasContext(canvasid, me);
-    
+      const isMaxW = canvasData.imgw > canvasData.imgh;
       //图片在canvas画布内X、Y轴初始偏移值
-      const xx = canvasData.isWH ? 0 : Math.abs((canvasData.imgw - canvasData.imgh) / 2) ,
-        yy = canvasData.isWH ? Math.abs((canvasData.imgh - canvasData.imgw) / 2) : 0;
-
+      const xx = isMaxW ? 0 : Math.abs((canvasData.imgw - canvasData.imgh) / 2) ,
+        yy = isMaxW ? Math.abs((canvasData.imgh - canvasData.imgw) / 2) : 0;
+      
       ctx.drawImage(imgurl, 0, 0, canvasData.imgw, canvasData.imgh, xx, yy, canvasData.imgw, canvasData.imgh);
-
       ctx.draw(false, () => {
-        //image图片最大长、宽
-        const cw = clipBoxData.width * canvasData.multiple, ch = clipBoxData.height * canvasData.multiple;
-
-        //裁切区尺寸*缩放倍数
-        const dw = clipBoxData.width * stv.scale, dh = clipBoxData.height * stv.scale;
 
         //画布中心点坐标
         const rx = (canvasData.imgwh / 2), ry = (canvasData.imgwh / 2);
 
+        //裁切区尺寸*缩放倍数
+        const dw = clipBoxData.width * (isMaxW?stv.scale:1), dh = clipBoxData.height * stv.scale;
+        const ss = saveW == saveH? (canvasData.imgw / dw) : (canvasData.imgh / dh);
         //裁切区在画布中的初始化值
-        const currentW = clipBoxData.width * (canvasData.imgwh / dw), currentH = clipBoxData.height * (canvasData.imgwh / dh);
+        let currentW = clipBoxData.width * ss, currentH = clipBoxData.height * ss;
+        
         wx.canvasToTempFilePath({
           fileType: 'jpg',
           //中心点 - (裁切区域初始值/2)- 位移 * (裁切区画布中的比例)
-          x: rx - (currentW / 2) - (stv.offsetX * (canvasData.imgwh / dw)),
-          y: ry - (currentH / 2) - (stv.offsetY * (canvasData.imgwh / dw)),
+          x: rx - (currentW / 2) - (stv.offsetX * ss),
+          y: ry - (currentH / 2) - (stv.offsetY * ss),
           width: currentW,
           height: currentH,
           destWidth: saveW,
           destHeight: saveH,
           canvasId: canvasid,
           success(res) {
+            wx.hideLoading();
             me.triggerEvent('insuccess', { clipurl: res.tempFilePath });
           },
-          complete(res){
+          fail(res){
+            wx.showToast({
+              title: '裁切失败',
+            })
+            med.triggerEvent('incancel', e);
             wx.hideLoading();
           }
         }, me);

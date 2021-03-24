@@ -20,8 +20,8 @@ Component({
    */
   properties: {
     active: {
-      type: String,
-      value: '',
+      type: Object,
+      value: [],
       observer: 'activeChange'
     },
   },
@@ -31,16 +31,18 @@ Component({
    */
   methods: {
     activeChange(val = this.data.active) {
+      if(!val) return;
       let items = this.getRelationNodes('../checkbox/checkbox');
       if (items.length > 0) {
         items.forEach(item => {
-          item.activeChange(val.indexOf(item.data.value) !== -1);
+          const key_idx = val.indexOf(item.data.key);
+          item.activeChange(key_idx !== -1);
         });
       }
     },
 
-    emitEvent(active) {
-      this.triggerEvent('inchange', active);
+    emitEvent(item) {
+      this.triggerEvent('inchange', item);
     }
   }
 })

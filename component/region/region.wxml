@@ -15,17 +15,17 @@
     <view class='flex-bar g-region-box'>
       <!-- 省 -->
       <scroll-view class="item-scroll" scroll-y scroll-into-view="{{isscroll1?('id-'+actData[0]):''}}">
-        <view id='id-{{index}}' class='item {{actData[0] == index?"active":"" }}' wx:for="{{jsonData}}" wx:key="{{index}}" bindtap='inChange' data-index="{{index}}" data-type="1"><text>{{item.value}}</text></view>
+        <view id='id-{{index}}' class='item {{actData[0] == index?"active":"" }}' wx:for="{{jsonData}}" wx:key="index" bindtap='inChange' data-index="{{index}}" data-type="1"><text>{{item.value}}</text></view>
       </scroll-view>
 
       <!-- 市 -->
       <scroll-view class="item-scroll" wx:if="{{level > 1}}" scroll-y scroll-into-view="{{isscroll2?('id-'+actData[1]):''}}">
-        <view id='id-{{index}}' class='item {{actData[1] == index?"active":"" }}' wx:for="{{jsonData[actData[0]].childs}}" wx:key="{{index}}" bindtap='inChange' data-index="{{index}}" data-type="2"><text>{{item.value}}</text></view>
+        <view id='id-{{index}}' class='item {{actData[1] == index?"active":"" }}' wx:for="{{jsonData[actData[0]].childs}}" wx:key="index" bindtap='inChange' data-index="{{index}}" data-type="2"><text>{{item.value}}</text></view>
       </scroll-view>
 
       <!-- 区 -->
       <scroll-view class="item-scroll" wx:if="{{level > 2}}" scroll-y scroll-into-view="{{isscroll3?('id-'+actData[2]):''}}">
-        <view id='id-{{index}}' class='item {{actData[2] == index?"active":"" }}' wx:for="{{jsonData[actData[0]].childs[actData[1]].childs}}" bindtap='inChange' wx:key="{{index}}" data-index="{{index}}" data-type="3"><text>{{item.value}}</text></view>
+        <view id='id-{{index}}' class='item {{actData[2] == index?"active":"" }}' wx:for="{{jsonData[actData[0]].childs[actData[1]].childs}}" bindtap='inChange' wx:key="index" data-index="{{index}}" data-type="3"><text>{{item.value}}</text></view>
       </scroll-view>
     </view>
   </view>

@@ -9,7 +9,9 @@ Page({
       state: false,
       imgurl:'',
       clipurl:''
-    }
+    },
+    saveW: 750,
+    saveH: 300
   },
 
   /**

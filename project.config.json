@@ -1,234 +1,238 @@
 {
-	"description": "项目配置文件。",
-	"packOptions": {
-		"ignore": []
-	},
-	"setting": {
-		"urlCheck": true,
-		"es6": true,
-		"enhance": true,
-		"postcss": true,
-		"minified": true,
-		"newFeature": true,
-		"coverView": true,
-		"nodeModules": false,
-		"autoAudits": false,
-		"showShadowRootInWxmlPanel": true,
-		"scopeDataCheck": false,
-		"uglifyFileName": false,
-		"checkInvalidKey": true,
-		"checkSiteMap": true,
-		"uploadWithSourceMap": true,
-		"babelSetting": {
-			"ignore": [],
-			"disablePlugins": [],
-			"outputPath": ""
-		}
-	},
-	"compileType": "miniprogram",
-	"libVersion": "2.9.3",
-	"appid": "wxccd02aa3adde2f9b",
-	"projectname": "GUI",
-	"isGameTourist": false,
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
-	"condition": {
-		"search": {
-			"current": -1,
-			"list": []
-		},
-		"conversation": {
-			"current": -1,
-			"list": []
-		},
-		"plugin": {
-			"current": -1,
-			"list": []
-		},
-		"game": {
-			"currentL": -1,
-			"list": []
-		},
-		"gamePlugin": {
-			"current": -1,
-			"list": []
-		},
-		"miniprogram": {
-			"current": 19,
-			"list": [
-				{
-					"id": -1,
-					"name": "input",
-					"pathName": "pages/input/input",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "list",
-					"pathName": "pages/list/list",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "flex",
-					"pathName": "pages/flex/flex",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "button",
-					"pathName": "pages/button/button",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "textarea",
-					"pathName": "pages/textarea/textarea",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "radio",
-					"pathName": "pages/radio/radio",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "checkbox",
-					"pathName": "pages/checkbox/checkbox",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "switch",
-					"pathName": "pages/switch/switch",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "loading",
-					"pathName": "pages/loading/loading",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "modal",
-					"pathName": "pages/modal/modal",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "drawer",
-					"pathName": "pages/drawer/drawer",
-					"query": ""
-				},
-				{
-					"id": 11,
-					"name": "tab",
-					"pathName": "pages/tab/tab",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "line",
-					"pathName": "pages/line/line",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "size",
-					"pathName": "pages/size/size",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "gui",
-					"pathName": "pages/gui/gui",
-					"query": ""
-				},
-				{
-					"id": 15,
-					"name": "gesture",
-					"pathName": "pages/gesture/gesture",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "region",
-					"pathName": "pages/region/region",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "clip",
-					"pathName": "pages/clip/clip",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "宫格",
-					"pathName": "pages/grid/grid",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 19,
-					"name": "索引",
-					"pathName": "pages/indexes/indexes",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 20,
-					"name": "drop",
-					"pathName": "pages/drop/drop",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 21,
-					"name": "swiper",
-					"pathName": "pages/swiper/swiper",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "吸顶",
-					"pathName": "pages/fixed/fixed",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "upload",
-					"pathName": "pages/upload/upload",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 24,
-					"name": "自定也头部",
-					"pathName": "pages/top/top",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "page",
-					"pathName": "pages/page/page",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "search",
-					"pathName": "pages/search/search",
-					"query": "",
-					"scene": null
-				}
-			]
-		}
-	}
+  "description": "项目配置文件。",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "useMultiFrameRuntime": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "bundle": false,
+    "useApiHook": true,
+    "useApiHostProcess": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.9.3",
+  "appid": "wxccd02aa3adde2f9b",
+  "projectname": "GUI",
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "currentL": -1,
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "input",
+          "pathName": "pages/input/input",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "list",
+          "pathName": "pages/list/list",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "flex",
+          "pathName": "pages/flex/flex",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "button",
+          "pathName": "pages/button/button",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "textarea",
+          "pathName": "pages/textarea/textarea",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "radio",
+          "pathName": "pages/radio/radio",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "checkbox",
+          "pathName": "pages/checkbox/checkbox",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "switch",
+          "pathName": "pages/switch/switch",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "loading",
+          "pathName": "pages/loading/loading",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "modal",
+          "pathName": "pages/modal/modal",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "drawer",
+          "pathName": "pages/drawer/drawer",
+          "query": ""
+        },
+        {
+          "id": 11,
+          "name": "tab",
+          "pathName": "pages/tab/tab",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "line",
+          "pathName": "pages/line/line",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "size",
+          "pathName": "pages/size/size",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "gui",
+          "pathName": "pages/gui/gui",
+          "query": ""
+        },
+        {
+          "id": 15,
+          "name": "gesture",
+          "pathName": "pages/gesture/gesture",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "region",
+          "pathName": "pages/region/region",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "clip",
+          "pathName": "pages/clip/clip",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "宫格",
+          "pathName": "pages/grid/grid",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 19,
+          "name": "索引",
+          "pathName": "pages/indexes/indexes",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 20,
+          "name": "drop",
+          "pathName": "pages/drop/drop",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 21,
+          "name": "swiper",
+          "pathName": "pages/swiper/swiper",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "吸顶",
+          "pathName": "pages/fixed/fixed",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "upload",
+          "pathName": "pages/upload/upload",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 24,
+          "name": "自定也头部",
+          "pathName": "pages/top/top",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "page",
+          "pathName": "pages/page/page",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "search",
+          "pathName": "pages/search/search",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
 }

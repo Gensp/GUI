@@ -55,9 +55,9 @@
   position: absolute;
   width: calc(100% - 64rpx);
   height: calc(100vw - 64rpx);
-  left: 32rpx;
+  left: 50%;
   top: 50%;
-  margin-top: calc(-50vw + 32rpx);
+  transform: translate(-50%, -50%);
 }
 .g-clip-area{
   position: absolute;

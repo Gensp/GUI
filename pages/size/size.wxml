@@ -1,6 +1,6 @@
 <!--pages/size/size.wxml-->
 <view class='wrap'>
-  <g-size g-class="demo-size" size='h{{index}}' wx:for="{{7}}" wx:key="{{index}}" wx:if="{{index > 0}}">h{{index}}尺寸文本</g-size>
+  <g-size g-class="demo-size" size='h{{index}}' wx:for="{{7}}" wx:key="index" wx:if="{{index > 0}}">h{{index}}尺寸文本</g-size>
   <g-size g-class="demo-size" strong size='h1'>h1加粗文本</g-size>
   <g-size g-class="demo-size" color="#2ca9e1" size='h2'>h2自定义颜色</g-size>
   <g-size g-class="demo-size" strong size='h3' align="tl"> h3左对齐</g-size>

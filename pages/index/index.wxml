@@ -6,6 +6,6 @@
     <view>简单、易用、可扩展</view>
   </g-size>
 </view>
-<g-box mode="border" title="{{i.title}}" wx:for="{{itemData}}" wx:for-item="i" wx:key="{{index}}">
-  <g-list link wx:for="{{i.list}}" wx:for-item="j" wx:key="{{index}}" bindtap="inToPage" data-path="{{j.path}}">{{j.val}}</g-list>
+<g-box mode="border" title="{{i.title}}" wx:for="{{itemData}}" wx:for-item="i" wx:for-index="idx" wx:key="idx">
+  <g-list link wx:for="{{i.list}}" wx:for-item="j" wx:for-index="jdx" wx:key="jdx" bindtap="inToPage" data-path="{{j.path}}">{{j.val}}</g-list>
 </g-box>

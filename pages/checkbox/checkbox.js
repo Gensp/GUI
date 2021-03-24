@@ -38,6 +38,7 @@ Page({
   inChange1({ detail = {} }){
     const me = this;
     const { checkboxActive } = me.data;
+    console.log(detail)
     me.setData({
       'checkboxActive': me.inRetrieval(checkboxActive, detail.value)
     });

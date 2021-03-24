@@ -2,12 +2,14 @@
 <g-box title="图片裁切"></g-box>
 <view class='wrap'>
   <g-button type="primary" bindintap="inUploadImg">上传图片</g-button>
-  <g-clip wx:if="{{clipData.state}}" imgurl="{{clipData.imgurl}}" bindincancel="inToggleClip" bindinsuccess="inToggleClip" />
+  <g-clip saveW="{{saveW}}" saveH="{{saveH}}" wx:if="{{clipData.state}}" imgurl="{{clipData.imgurl}}" bindincancel="inToggleClip" bindinsuccess="inToggleClip" />
   
 </view>
 <block wx:if="{{clipurl}}">
   <g-box title="裁切的图片"></g-box>
-  <view class='wrap'>
-    <image id="clipimg" class="clip-img" src="{{clipurl}}" />
+  <view class="wrap">
+    <scroll-view scroll-x style="white-space: nowrap;">
+      <image id="clipimg" class="clip-img" src="{{clipurl}}" style="width:690rpx" mode="widthFix" />
+    </scroll-view>
   </view>
 </block>

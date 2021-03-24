@@ -23,6 +23,11 @@ Component({
       value: 0
     },
 
+    key:{
+      type: [Number, String],
+      value: ''
+    },
+
     value:{
       type: String,
       value:''
@@ -31,7 +36,7 @@ Component({
     //选中的颜色
     color: {
       type: String,
-      value: '#2ca9e1'
+      value: '#1d1b1b'
     },
 
     //是否选中
@@ -71,7 +76,8 @@ Component({
     inChange(e){
       const me = this;
       if (me.data.disabled) return;
-      const item = { active: !me.data.checked, value: me.data.value, index: me.data.index };
+      const { key, checked, index } = me.data;
+      const item = { key, checked, index };
       const parent = me.getRelationNodes('../radio-group/radio-group')[0];
       parent ? parent.emitEvent(item) : me.triggerEvent('inchange', item);
     }

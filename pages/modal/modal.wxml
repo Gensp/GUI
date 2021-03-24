@@ -28,7 +28,7 @@
   <view class='item-modal'>
     <g-button type='primary' plain bindintap="inToggleModal6">自定义留言</g-button>
     <g-modal show="{{modal6}}" bindinsuccess="inToggleModal6" bindincancel="inToggleModal6">
-      <view class='custom-msg' wx:for="{{5}}" wx:key="{{index}}">自定义留言{{item}}</view>
+      <view class='custom-msg' wx:for="{{5}}" wx:key="index">自定义留言{{item}}</view>
     </g-modal>
   </view>
 

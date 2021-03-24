@@ -20,7 +20,7 @@ Component({
    */
   properties: {
     active: {
-      type: String,
+      type: [String, Number],
       value: '',
       observer: 'activeChange'
     },
@@ -35,7 +35,7 @@ Component({
       let items = this.getRelationNodes('../radio/radio');
       if (items.length > 0) {
         items.forEach(item => {
-          item.activeChange(val === item.data.value);
+          item.activeChange(val === item.data.key);
         });
       }
     },
