@@ -69,6 +69,7 @@ Component({
 
     //点击
     inTap(event){
+      if(this.data.disabled) return;
       this.triggerEvent('intap', event);
     },
   }
